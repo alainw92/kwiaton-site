@@ -1,15 +1,13 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      treść la la
-
-      
+    <v-col class="text-center">
+      podstrona
     </v-col>
   </v-row>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'About',
 }
 </script>
