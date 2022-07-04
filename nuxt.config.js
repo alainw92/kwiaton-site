@@ -13,8 +13,14 @@ export default {
 	srcDir: "src/",
 	//
 	head: {
-		title: "Kwiaton",
-		meta: [{ charset: "utf-8" }],
+		titleTemplate: (titleChunk) => (titleChunk ? `Kwiaton - ${titleChunk}` : "Kwiaton"),
+		htmlAttrs: {
+			lang: "pl",
+			amp: true,
+		},
+		meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }],
+		link: [{ rel: "favicon", href: "favicon.ico" }],
+		noscript: [{ innerHTML: "This website requires JavaScript." }],
 	},
 	loading: {
 		color: "green",
