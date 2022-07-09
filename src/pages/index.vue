@@ -1,5 +1,5 @@
 <template>
-	<div>Hello World!</div>
+	<div>Strona główna</div>
 </template>
 
 <script>
@@ -9,13 +9,6 @@ export default {
 	head() {
 		return {
 			title: "Strona Główna",
-			meta: [
-				{
-					hid: "description",
-					name: "description",
-					content: "Opis Kwiaton",
-				},
-			],
 		};
 	},
 };

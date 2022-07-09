@@ -1,0 +1,79 @@
+@use 'var';
+
+/* MARGINS */
+@for $i from 0 through 12 {
+	.ma-#{$i} {
+		margin: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.my-#{$i} {
+		margin-top: calc(var.$base-spacing * $i) !important;
+		margin-bottom: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.mx-#{$i} {
+		margin-left: calc(var.$base-spacing * $i) !important;
+		margin-right: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.mt-#{$i} {
+		margin-top: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.mr-#{$i} {
+		margin-right: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.mb-#{$i} {
+		margin-bottom: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.ml-#{$i} {
+		margin-left: calc(var.$base-spacing * $i) !important;
+	}
+}
+
+/* PADDINGS */
+@for $i from 0 through 12 {
+	.pa-#{$i} {
+		padding: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.py-#{$i} {
+		padding-top: calc(var.$base-spacing * $i) !important;
+		padding-bottom: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.px-#{$i} {
+		padding-left: calc(var.$base-spacing * $i) !important;
+		padding-right: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.pt-#{$i} {
+		padding-top: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.pr-#{$i} {
+		padding-right: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.pb-#{$i} {
+		padding-bottom: calc(var.$base-spacing * $i) !important;
+	}
+}
+@for $i from 0 through 12 {
+	.pl-#{$i} {
+		padding-left: calc(var.$base-spacing * $i) !important;
+	}
+}
