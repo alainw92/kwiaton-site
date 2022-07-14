@@ -29,14 +29,51 @@ export default {
 	alias: {
 		// style: resolve(__dirname, "./assets/style"),
 	},
-	css: ["@/assets/css/main", "@/assets/css/animate.min", "@fortawesome/fontawesome-svg-core/styles.css"],
+
+	css: ["@/assets/styles/main", "@/assets/styles/animate.min", "@fortawesome/fontawesome-free/css/all.css"],
+
+	/* pageTransition: {
+		name: "page",
+		mode: "",
+	}, */
 
 	plugins: ["~/plugins/fontawesome.js"],
+
+	buildModules: ["@nuxtjs/vuetify"],
 
 	vue: {
 		config: {
 			// productionTip: false,
 			// devtools: false,
 		},
+	},
+
+	vuetify: {
+		// customVariables: ["~/assets/styles/vuetify-variables.scss"],
+		defaultAssets: {
+			font: {
+				family: "Verdana, Geneva, Tahoma, sans-serif",
+			},
+			icons: {
+				iconfont: "fa",
+			},
+		},
+		// theme: { disable: true },
+		theme: {
+			themes: {
+				light: {
+					primary: "#118511",
+					secondary: "#424242",
+					accent: "#82B1FF",
+					error: "#FF5252",
+					info: "#2196F3",
+					success: "#4CAF50",
+					warning: "#FFC107",
+					bg: "#CCC1B6",
+				},
+			},
+			options: { customProperties: true },
+		},
+		treeShake: true,
 	},
 };

@@ -1,19 +1,26 @@
 <template>
-  <div>
-	<TheHeader />
-	<div>
-		<Nuxt />
-	</div>
-  </div>
+	<v-app>
+		<TheHeader />
+		<div>
+			<Nuxt />
+		</div>
+		<TheFooter class="footer" />
+	</v-app>
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader';
+import TheHeader from "~/components/TheHeader";
+import TheFooter from "~/components/TheFooter";
 
 export default {
-	name: 'DefaultLayout',
+	name: "DefaultLayout",
 	components: {
-		TheHeader
-	}
-}
+		TheHeader,
+		TheFooter,
+	},
+};
 </script>
+
+<style lang="scss" scoped>
+
+</style>

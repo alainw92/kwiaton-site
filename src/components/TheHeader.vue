@@ -1,5 +1,6 @@
 <template>
 	<header>
+		<the-mobile-menu></the-mobile-menu>
 		<div class="logo-wrapper d-flex align-center justify-space-between">
 			<div class="logo">
 				<picture>
@@ -14,9 +15,9 @@
 				</a>
 			</div>
 			<div class="menu-trigger">
-				<button class="menu-trigger__btn">
-					<fa-icon class="icon" icon="fas fa-bars"></fa-icon>
-				</button>
+				<v-btn icon class="menu-trigger__btn" @click="toggleMenu(isMenuEnabled)">
+					<v-icon>fas fa-bars</v-icon>
+				</v-btn>
 			</div>
 		</div>
 		<div class="menu-wrapper">
@@ -28,7 +29,7 @@
 				</div>
 				<div class="fb-icon">
 					<a href="https://alanwnek.com.pl">
-						<fa-icon icon="fab fa-facebook-square"></fa-icon>
+						<v-icon>fab fa-facebook-square</v-icon>
 					</a>
 				</div>
 				<div class="main-menu">
@@ -46,12 +47,27 @@
 
 <script>
 import { debounce } from "~/helpers/debounce.js";
+import { mapMutations } from 'vuex';
+
+import TheMobileMenu from './TheMobileMenu.vue';
 
 export default {
 	name: "TheHeader",
 
+	components: { TheMobileMenu },
+
 	data() {
-		return { isMobile: false };
+		return { isMobile: false, showMenu: false };
+	},
+
+	computed: {
+		isMenuEnabled() {
+			return this.$store.state.menuEnabled;
+		}
+	},
+
+	methods: {
+		...mapMutations(['toggleMenu']),
 	},
 
 	mounted() {
@@ -67,17 +83,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use "~/assets/css/_var.scss";
+@import "~/assets/styles/_var.scss";
 
 header {
 	margin-bottom: 1em;
 }
 
 .logo-wrapper {
-	padding: 0.5em;
+	padding: 1rem 1rem;
 
 	.logo {
-		width: clamp(200px, 60vw, 500px);
+		width: clamp(150px, 40vw, 300px);
 		min-width: 20vw;
 
 		img {
@@ -88,19 +104,9 @@ header {
 
 
 .menu-wrapper {
-	background-color: var.$bg-light-color;
-	border-top: thin solid var.$primary-color;
-	border-bottom: thin solid var.$primary-color;
+	background-color: $bg-light-color;
+	border-top: thin solid $primary-color;
+	border-bottom: thin solid $primary-color;
 }
 
-.menu-trigger__btn {
-	background: none;
-	border: thin solid var.$text-color;
-	width: 3rem;
-	height: 3rem;
-
-	.icon {
-		font-size: 2rem;
-	}
-}
 </style>

@@ -1,5 +1,7 @@
 <template>
-	<div>Strona główna</div>
+	<div>Strona główna
+		<p v-for="i in 10" :key="i">{{ i }}</p>
+	</div>
 </template>
 
 <script>

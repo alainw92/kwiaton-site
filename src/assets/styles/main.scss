@@ -1,0 +1,60 @@
+@import '_var.scss';
+/* @use 'spacing'; */
+
+/* BASIC SETUP */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* VUETIFY OVERRIDE */
+.theme--light.v-application {
+	background: none !important;
+}
+.v-application {
+	line-height: inherit !important;
+}
+
+/* BASE ELEMENTS */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $bg-color;
+	color: $text-color;
+	font-family: $font-family-base;
+}
+
+a {
+	color: $accent-color;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		text-decoration: underline;
+	}
+
+
+}
+
+/* FORMS */
+
+
+/* LAYOUT */
+.container {
+	margin: 0 auto;
+	width: clamp(300px, 80%, 1000px);
+	background-color: rgba($color: $primary-color, $alpha: 0.3);
+}
+
+
+/* TRANSITIONS */
+.page-enter-active,
+.page-leave-active {
+	transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-active {
+	opacity: 0;
+}
