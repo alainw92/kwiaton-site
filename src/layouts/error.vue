@@ -1,6 +1,8 @@
 <template>
 <div class="error-page">
   <h1>Error</h1>
+  <p>Status: {{ statusCode }}</p>
+  <p>{{ message }}</p>
 </div>
 </template>
 
@@ -44,6 +46,7 @@ export default {
 	right: 0;
 	bottom: 0;
 	background: red;
+  color: white;
 	z-index: 99;
 }
 </style>

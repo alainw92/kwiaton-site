@@ -10,23 +10,17 @@
 
 /* VUETIFY OVERRIDE */
 .theme--light.v-application {
-	background: none !important;
+	background: var(--v-bg-base) !important;
+	color: var(--v-text-base) !important;
 }
 .v-application {
 	line-height: inherit !important;
 }
 
 /* BASE ELEMENTS */
-body {
-	margin: 0;
-	padding: 0;
-	background-color: $bg-color;
-	color: $text-color;
-	font-family: $font-family-base;
-}
 
-a {
-	color: $accent-color;
+
+.v-application a {
 	text-decoration: none;
 
 	&:hover,
@@ -36,17 +30,23 @@ a {
 
 
 }
+.v-application .link-alt {
+	color: var(--v-text-base);
+}
 
 /* FORMS */
 
 
 /* LAYOUT */
-.container {
-	margin: 0 auto;
-	width: clamp(300px, 80%, 1000px);
-	background-color: rgba($color: $primary-color, $alpha: 0.3);
-}
 
+
+/* TYPOGRAPHY */
+.font-smaller {
+	font-size: 0.8em;
+}
+.font-bigger {
+	font-size: 1.2em;
+}
 
 /* TRANSITIONS */
 .page-enter-active,

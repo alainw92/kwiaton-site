@@ -1,7 +1,7 @@
 <template>
-  <v-card>
-	O firmie
-  </v-card>
+  <div>
+	Polityka prywatności
+  </div>
 </template>
 
 <script>

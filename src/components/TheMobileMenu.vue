@@ -4,8 +4,10 @@
     app
     clipped
     bottom
+    right
     temporary
     :mobile-breakpoint="600"
+    aria-role="navigation"
     v-model="isMenuEnabled"
   >
     <div class="d-flex justify-end pa-2">
