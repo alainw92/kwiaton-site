@@ -8,17 +8,12 @@
 	box-sizing: border-box;
 }
 
-/* VUETIFY OVERRIDE */
-.theme--light.v-application {
-	background: var(--v-bg-base) !important;
-	color: var(--v-text-base) !important;
+html {
+	overflow-y: auto !important;
 }
-.v-application {
-	line-height: inherit !important;
-}
+
 
 /* BASE ELEMENTS */
-
 
 .v-application a {
 	text-decoration: none;
@@ -28,6 +23,9 @@
 		text-decoration: underline;
 	}
 
+	&.v-btn {
+		text-decoration: none;
+	}
 
 }
 .v-application .link-alt {
@@ -38,6 +36,15 @@
 
 
 /* LAYOUT */
+.font-deco {
+	font-family: 'Send Flowers', cursive !important;
+}
+.full-height {
+	height: 100%;
+}
+.full-width {
+	height: 100%;
+}
 
 
 /* TYPOGRAPHY */
@@ -46,6 +53,9 @@
 }
 .font-bigger {
 	font-size: 1.2em;
+}
+.text-indent {
+	text-indent: 1em;
 }
 
 /* TRANSITIONS */

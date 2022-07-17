@@ -7,6 +7,8 @@ export const state = () => ({
 		{ src: "/oferta", text: "Oferta", name: "Offer" },
 		{ src: "/kontakt", text: "Kontakt", name: "Contact" },
 	],
+	//
+	facebookUrl: "https://www.facebook.com/kwiatonboguchwala",
 });
 
 export const getters = {

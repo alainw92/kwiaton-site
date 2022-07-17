@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <v-overlay v-if="loading" opacity="1" :color="$vuetify.theme.themes.light.basis">Ładowanie...</v-overlay>
     <the-mobile-menu></the-mobile-menu>
     <v-main>
       <TheHeader />
@@ -28,6 +29,12 @@ export default {
     TheMobileMenu,
   },
 
+  data() {
+    return {
+      loading: true
+    }
+  },
+
   computed: {
     isMobile() {
       return this.$store.state.isMobile;
@@ -38,6 +45,10 @@ export default {
     ...mapMutations(['setMobile'])
   },
 
+  created() {
+    // console.log('created');
+  },
+
   mounted() {
     this.setMobile(window.innerWidth < 600);
     window.addEventListener(
@@ -46,6 +57,8 @@ export default {
         this.setMobile(window.innerWidth < 600);
       }, 100)
     );
+    this.loading = false;
+    // console.log('mounted');
   },
 };
 </script>

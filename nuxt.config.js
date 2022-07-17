@@ -20,7 +20,17 @@ export default {
 			amp: true,
 		},
 		meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }],
-		link: [{ rel: "favicon", href: "favicon.ico" }],
+		link: [
+			{ rel: "favicon", href: "favicon.ico" },
+			{
+				rel: "stylesheet",
+				href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap",
+			},
+			{
+				rel: "stylesheet",
+				href: "https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap",
+			},
+		],
 		noscript: [{ innerHTML: "Przepraszamy. Strona wymaga włączonego JavaScript." }],
 	},
 	loading: {
@@ -59,13 +69,8 @@ export default {
 	},
 
 	vuetify: {
-		// customVariables: ["~/assets/styles/vuetify-variables.scss"],
+		customVariables: ["~/assets/styles/vuetify-variables.scss"],
 		optionsPath: "./vuetify.options.js",
-		defaultAssets: {
-			font: {
-				family: "Verdana, Geneva, Tahoma, sans-serif",
-			},
-		},
 		treeShake: true,
 	},
 };
