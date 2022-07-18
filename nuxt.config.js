@@ -39,11 +39,11 @@ export default {
 		throttle: 0,
 		continuous: true,
 	},
-	loadingIndicator: {
+	/* loadingIndicator: {
 		name: "rectangle-bounce",
 		color: "#574834",
 		background: "#d8d2c8",
-	},
+	}, */
 	alias: {
 		// style: resolve(__dirname, "./assets/style"),
 	},

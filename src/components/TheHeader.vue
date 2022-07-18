@@ -16,8 +16,8 @@
 					<div v-for="lang in langs" :key="lang.text" class="mx-2">{{ lang.text }}</div>
 				</div>
 				<div>
-					<v-btn large icon :href="facebookUrl" target="_blank" class="float-right">
-						<v-icon-fb round color-on-hover large></v-icon-fb>
+					<v-btn large icon tile :href="facebookUrl" target="_blank" class="float-right">
+						<v-icon-fb color-on-hover large></v-icon-fb>
 					</v-btn>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 		</v-container>
 		<!-- MENU STRIP -->
 		<div class="menu-wrapper">
-			<v-container v-if="!isMobile" class="py-2">
+			<v-container v-if="!isMobile" class="py-1">
 				<div class="main-menu">
 					<ul>
 						<li v-for="item in menuItems" :key="item.src">
@@ -93,11 +93,11 @@ export default {
 
 <style lang="scss" scoped>
 header {
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 
 .logo-wrapper {
-	height: clamp(5rem, 25vw, 10rem);
+	height: clamp(5rem, 25vw, 8rem);
 	padding: 1rem 1rem;
 
 	.logo-link {
@@ -131,11 +131,11 @@ header {
 				display: block;
 				background: none;
 				color: var(--v-text-base);
-				font-size: 1.2em;
+				font-size: 1.0em;
 				font-stretch: 80%;
 				font-weight: 300;
 				letter-spacing: 0.04em;
-				padding: 0.5em 2.2em;
+				padding: 0.4em 2.2em;
 				text-transform: capitalize;
 				transition: background-color 0.3s;
 
@@ -172,7 +172,7 @@ header {
 }
 @media screen and (min-width: 599px) and (max-width: 800px) {
 	.main-menu {
-		font-size: 0.7em;
+		font-size: 0.8em;
 	}
 }
 </style>

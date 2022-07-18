@@ -4,7 +4,9 @@
 			<p class="text-center">
 				<v-btn
 					text
+					tile
 					:href="facebookUrl"
+					:color="facebookColor"
 					target="_blank"
 					aria-label="Facebook Link"
 				>
@@ -15,7 +17,7 @@
 
 			<v-container>
 				<v-row>
-					<v-col v-for="(item, i) in items" :key="i" cols="12" md="6" :order-md="i" class="d-flex align-center">
+					<v-col v-for="(item, i) in items" :key="i" cols="12" md="6" class="d-flex align-center">
 						<span class="footer__icon"><v-icon>{{ item.icon }}</v-icon></span>
 						<span v-html="item.text"></span>
 					</v-col>
@@ -36,23 +38,22 @@ export default {
 
 	data() {
 		return {
-			items: [
-				{ icon: "$tel", text: `(17) 873 32 40` },
-				{ icon: "$mobile", text: `(+48) 504 102 160` },
-				{ icon: "$address", text: `ul. Cicha 32A<br> 36-040 Boguchwała` },
-				{
-					icon: "$email",
-					text: `&#105;&#110;&#102;&#111;&#064;&#107;&#119;&#105;&#097;&#116;&#111;&#110;&#045;&#115;&#122;&#116;&#117;&#107;&#097;&#116;&#111;&#114;&#115;&#116;&#119;&#111;&#046;&#099;&#111;&#109;&#046;&#112;&#108;`,
-				},
-			],
+			//
 		};
 	},
 
 	computed: {
+		items() {
+			return this.$store.state.contactItems;
+		},
+		//
 		facebookUrl() {
 			return this.$store.state.facebookUrl;
 		},
-
+		facebookColor() {
+			return this.$store.state.facebookColor;
+		},
+		//
 		year() {
 			return new Date().getFullYear();
 		},
@@ -73,10 +74,6 @@ export default {
 		text-align: center;
 		width: 2rem;
 		margin-right: 0.75rem;
-	}
-
-	.contact-items {
-		display: flex;
 	}
 
 	.copy {

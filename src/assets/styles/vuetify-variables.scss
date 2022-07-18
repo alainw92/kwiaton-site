@@ -1,5 +1,7 @@
+@import "var";
+
 $body-font-family: "Open Sans", sans-serif !default;
-$heading-font-family: "Send Flowers", cursive !default;
+$heading-font-family: $font-deco !default;
 $font-size-root: 18px !default;
 /* $line-height-root: 1.5 !default; */
 

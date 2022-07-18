@@ -20,13 +20,17 @@ export default {
 
 	data() {
 		return {
-			colorBase: "rgb(12,133,237)",
+			//
 		};
 	},
 
 	computed: {
+		colorFb() {
+			return this.$store.state.facebookColor;
+		},
+
 		color() {
-			return this.colorOnHover ? "" : this.colorBase;
+			return this.colorOnHover ? "" : this.colorFb;
 		},
 
 		icon() {
@@ -35,7 +39,7 @@ export default {
 
 		cssProps() {
 			return {
-				"--icon-color": this.colorBase,
+				"--icon-color": this.colorFb,
 			};
 		},
 	},

@@ -1,10 +1,10 @@
 {
 	"accent": "#118511",
 	"primary": "#118511",
-	"secondary": "#774f27",
-	"basis": "#CCC1B6",
+	"secondary": "#8F774D",
+	"basis": "#C9C5B7",
 	"text": "#574834",
-	"bg": "#d8d2c8",
+	"bg": "#D5D5C8",
 	"bgLight": "#FFFFFF",
 
 	"error": "#FF5252",

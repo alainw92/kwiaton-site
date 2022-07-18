@@ -36,7 +36,13 @@
 </template>
 
 <script>
-export default {};
-</script>
+export default {
+	name: 'AboutPage',
 
-<style></style>
+	head() {
+		return {
+			title: "O firmie",
+		};
+	},
+};
+</script>

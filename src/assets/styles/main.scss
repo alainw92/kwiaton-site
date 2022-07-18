@@ -37,13 +37,13 @@ html {
 
 /* LAYOUT */
 .font-deco {
-	font-family: 'Send Flowers', cursive !important;
+	font-family: $font-deco !important;
 }
 .full-height {
 	height: 100%;
 }
 .full-width {
-	height: 100%;
+	width: 100%;
 }
 
 

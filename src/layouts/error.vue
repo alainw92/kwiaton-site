@@ -1,52 +1,43 @@
 <template>
-<div class="error-page">
-  <h1>Error</h1>
-  <p>Status: {{ statusCode }}</p>
-  <p>{{ message }}</p>
-</div>
+	<v-alert prominent type="error">
+		<h1>Wystąpił błąd</h1>
+		<p class="font-bigger">Kod błędu: {{ statusCode }}</p>
+		<p class="mb-0">{{ message }}</p>
+	</v-alert>
 </template>
 
 <script>
 export default {
-	name: 'NuxtError',
-  props: {
-    error: {
-      type: Object,
-      default: null
-    }
-  },
-  computed: {
-    statusCode () {
-      return (this.error && this.error.statusCode) || 500
-    },
-    message () {
-      return this.error.message || '<%= messages.client_error %>'
-    }
-  },
-  head () {
-    return {
-      title: this.message,
-      meta: [
-        {
-          name: 'viewport',
-          content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0'
-        }
-      ]
-    }
-  }
-}
-</script>
+	name: "NuxtError",
 
-<style scoped>
-.error-page {
-	padding: 1em;
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background: red;
-  color: white;
-	z-index: 99;
-}
-</style>
+	props: {
+		error: {
+			type: Object,
+			default: null,
+		},
+	},
+
+  head() {
+		return {
+			title: this.message,
+			meta: [
+				{
+					name: "viewport",
+					content: "width=device-width,initial-scale=1.0,minimum-scale=1.0",
+				},
+			],
+		};
+	},
+
+	computed: {
+		statusCode() {
+			return (this.error && this.error.statusCode) || 500;
+		},
+		message() {
+      if (this.statusCode === 404) return 'Brak strony pod tym adresem';
+      //
+			return this.error.message || "<%= messages.client_error %>";
+		},
+	},
+};
+</script>
