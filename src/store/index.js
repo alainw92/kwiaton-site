@@ -2,10 +2,15 @@ export const state = () => ({
 	isMobile: false,
 	menuEnabled: false,
 	menuItems: [
-		{ src: "/", text: "Główna", name: "Home" },
-		{ src: "/o-firmie", text: "O firmie", name: "About" },
-		{ src: "/oferta", text: "Oferta", name: "Offer" },
-		{ src: "/kontakt", text: "Kontakt", name: "Contact" },
+		{ src: "/", name: "Home" },
+		{ src: "/o-firmie", name: "About" },
+		{ src: "/oferta", name: "Offer" },
+		{ src: "/kontakt", name: "Contact" },
+	],
+	locales: [
+		{ text: "PL", locale: "pl", src: "" },
+		{ text: "EN", locale: "en", src: "" },
+		{ text: "DE", locale: "de", src: "" },
 	],
 	contactItems: [
 		{ icon: "$tel", text: `(17) 873 32 40` },

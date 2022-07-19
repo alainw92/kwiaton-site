@@ -1,3 +1,20 @@
+<i18n>
+{
+	"pl": {
+		"copyright": "Kwiaton - Pracownia sztukatorska. Wszelkie prawa zastrzeżone.",
+		"privacyPolicy": "polityka prywatności"
+	},
+	"en": {
+		"copyright": "Kwiaton - Stucco workshop. All rights reserved.",
+		"privacyPolicy": "privacy policy [PL]"
+	},
+	"de": {
+		"copyright": "Kwiaton - Stuckwerkstatt. Alle Rechte vorbehalten.",
+		"privacyPolicy": "Datenschutz-Bestimmungen [PL]"
+	}
+}
+</i18n>
+
 <template>
 	<footer aria-label="footer">
 		<div class="footer">
@@ -24,10 +41,10 @@
 				</v-row>
 			</v-container>
 
-			<p class="copy">&copy; {{ year }} Kwiaton - Pracownia sztukatorska. Wszelkie prawa zastrzeżone.</p>
+			<p class="copy">&copy; {{ `${year} ${$t('copyright')}` }}</p>
 		</div>
 		<div class="pt-2 pb-6 privacy">
-			<nuxt-link to="/polityka-prywatnosci" class="link-alt font-smaller">polityka prywatności</nuxt-link>
+			<nuxt-link :to="localePath(privacySrc)" class="link-alt font-smaller">{{ $t('privacyPolicy') }}</nuxt-link>
 		</div>
 	</footer>
 </template>
@@ -38,7 +55,7 @@ export default {
 
 	data() {
 		return {
-			//
+			privacySrc: '/polityka'
 		};
 	},
 

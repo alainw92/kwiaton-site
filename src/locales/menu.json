@@ -1,0 +1,26 @@
+{
+	"pl": {
+		"menu": {
+			"Home": "Główna",
+			"About": "O Firmie",
+			"Offer": "Oferta",
+			"Contact": "Kontakt"
+		}
+	},
+	"en": {
+		"menu": {
+			"Home": "Home",
+			"About": "About Us",
+			"Offer": "Offer",
+			"Contact": "Contact"
+		}
+	},
+	"de": {
+		"menu": {
+			"Home": "Startseite",
+			"About": "Über Uns",
+			"Offer": "Angebot",
+			"Contact": "Kontakt"
+		}
+	}
+}

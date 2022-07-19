@@ -1,6 +1,20 @@
+<i18n>
+{
+  "pl": {
+    "contact": "Kontakt"
+  },
+  "en": {
+    "contact": "Contact"
+  },
+  "de": {
+    "contact": "Kontakt"
+  }
+}
+</i18n>
+
 <template>
 	<main>
-		<h1 class="text-h4 mb-6 ml-4">Kontakt</h1>
+		<h1 class="text-h4 mb-6 ml-4">{{ $t('contact') }}</h1>
 		<v-row>
 			<v-col cols="12" md="6">
 				<card class="px-6 py-8 full-height d-flex flex-column align-stretch">
@@ -32,6 +46,14 @@
 <script>
 export default {
 	name: "ContactPage",
+
+	nuxtI18n: {
+		paths: {
+			pl: "/kontakt", // -> accessible at /kontakt (no prefix since it's the default locale)
+			en: "/contact", // -> accessible at /en/contact
+			de: "/kontakte", // -> accessible at /de/kontakte
+		},
+	},
 
 	head() {
 		return {

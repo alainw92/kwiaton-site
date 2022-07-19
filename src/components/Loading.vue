@@ -27,8 +27,8 @@ export default {
 	position: absolute;
 	top: -50%;
 	left: -50%;
-	width: 150vw;
-	height: 150vh;
+	width: 200vw;
+	height: 200vh;
 	transform: translate(-50%, -50%);
 	background-color: var(--v-bg-base);
 	z-index: 0;

@@ -1,4 +1,4 @@
-@import '_var.scss';
+@import "_var.scss";
 /* @use 'spacing'; */
 
 /* BASIC SETUP */
@@ -11,7 +11,6 @@
 html {
 	overflow-y: auto !important;
 }
-
 
 /* BASE ELEMENTS */
 
@@ -26,14 +25,25 @@ html {
 	&.v-btn {
 		text-decoration: none;
 	}
-
 }
 .v-application .link-alt {
 	color: var(--v-text-base);
 }
 
-/* FORMS */
+.lang-link {
+	padding: 4px 8px;
+	line-height: 1em;
+	color: var(--v-text-base) !important;
+	transition: background-color 0.3s;
 
+	&:hover,
+	&.nuxt-link-exact-active {
+		text-decoration: none !important;
+		background-color: var(--v-basis-base);
+	}
+}
+
+/* FORMS */
 
 /* LAYOUT */
 .font-deco {
@@ -45,7 +55,6 @@ html {
 .full-width {
 	width: 100%;
 }
-
 
 /* TYPOGRAPHY */
 .font-smaller {

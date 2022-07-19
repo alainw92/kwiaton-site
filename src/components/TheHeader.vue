@@ -1,3 +1,18 @@
+<i18n src="~/locales/menu.json"></i18n>
+<i18n>
+{
+	"pl": {
+		"sentence": "lat w tworzeniu piękna"
+	},
+	"en": {
+		"sentence": "years in making beauty"
+	},
+	"de": {
+		"sentence": "Jahre im Schaffen von Schönheit"
+	}
+}
+</i18n>
+
 <template>
 	<header>
 		<v-container class="logo-wrapper d-flex align-stretch justify-space-between">
@@ -13,7 +28,9 @@
 			</nuxt-link>
 			<div v-if="!isMobile" class="d-flex flex-column justify-space-between">
 				<div class="d-flex">
-					<div v-for="lang in langs" :key="lang.text" class="mx-2">{{ lang.text }}</div>
+					<div v-for="lang in langs" :key="lang.name">
+						<nuxt-link :to="switchLocalePath(lang.locale)" class="lang-link">{{ lang.text }}</nuxt-link>
+					</div>
 				</div>
 				<div>
 					<v-btn large icon tile :href="facebookUrl" target="_blank" class="float-right">
@@ -33,12 +50,14 @@
 				<div class="main-menu">
 					<ul>
 						<li v-for="item in menuItems" :key="item.src">
-							<nuxt-link :to="item.src">{{ item.text }}</nuxt-link>
+							<nuxt-link :to="localePath(item.src)">{{ $t(`menu.${item.name}`) }}</nuxt-link>
 						</li>
 					</ul>
 				</div>
 			</v-container>
-			<v-container v-if="isMobile" class="font-deco font-italic font-bigger text-center">{{ sentence }}</v-container>
+			<v-container v-if="isMobile" class="font-deco font-italic font-bigger text-center">{{
+				`${years} ${$t("sentence")}`
+			}}</v-container>
 		</div>
 	</header>
 </template>
@@ -54,13 +73,12 @@ export default {
 	},
 
 	computed: {
-		sentence() {
-			const text = " lat w tworzeniu piękna";
+		years() {
 			const now = new Date();
 			const startDate = new Date("1991-09-05");
 			let diff = (now - startDate) / (1000 * 60 * 60 * 24 * 365);
 			diff = Math.floor(diff);
-			return `${diff}${text}`;
+			return `${diff}`;
 		},
 
 		isMobile() {
@@ -77,11 +95,7 @@ export default {
 		},
 
 		langs() {
-			return [
-				{ text: "PL", src: "" },
-				{ text: "EN", src: "" },
-				{ text: "DE", src: "" },
-			];
+			return this.$store.state.locales;
 		},
 	},
 
@@ -131,7 +145,7 @@ header {
 				display: block;
 				background: none;
 				color: var(--v-text-base);
-				font-size: 1.0em;
+				font-size: 1em;
 				font-stretch: 80%;
 				font-weight: 300;
 				letter-spacing: 0.04em;

@@ -1,3 +1,5 @@
+<i18n src="~/locales/menu.json"></i18n>
+
 <template>
 	<!-- MOBILE NAV DRAWER -->
 	<v-navigation-drawer
@@ -10,33 +12,29 @@
 		aria-role="navigation"
 		v-model="isMenuEnabled"
 	>
-		<div class="d-flex justify-end pa-2">
-			<v-btn icon @click="toggleMenu(true)">
-				<v-icon>$close</v-icon>
-			</v-btn>
-		</div>
-		<router-link
-			v-for="item in menuItems"
-			:key="item.src"
-			:to="{ path: item.src }"
-			v-ripple
-			class="mobile-menu-item"
-			exact-active-class="drawer-menu-active"
-			>{{ item.text }}</router-link
-		>
-
-		<!-- <div class="lang-switch mb-2">
-			<v-btn
-				v-for="l in languages"
-				:key="l"
-				text
-				tile
-				small
-				:class="{ 'lang-active': lang === l, 'font-weight-light': true, 'px-1': true, 'mx-1': true }"
-				@click="chooseLang(l)"
-				>{{ l }}</v-btn
+		<div class="full-height d-flex flex-column">
+			<div class="d-flex justify-end pa-2">
+				<v-btn icon @click="toggleMenu(true)">
+					<v-icon>$close</v-icon>
+				</v-btn>
+			</div>
+			<nuxt-link
+				v-for="item in menuItems"
+				:key="item.src"
+				:to="localePath(item.src)"
+				v-ripple
+				class="mobile-menu-item"
+				exact-active-class="drawer-menu-active"
+				>{{ $t(`menu.${item.name}`) }}</nuxt-link
 			>
-		</div> -->
+
+			<v-spacer></v-spacer>
+			<div class="d-flex justify-center mb-3">
+				<div v-for="lang in langs" :key="lang.text" class="mx-1">
+					<nuxt-link :to="switchLocalePath(lang.locale)" class="lang-link">{{ lang.text }}</nuxt-link>
+				</div>
+			</div>
+		</div>
 	</v-navigation-drawer>
 </template>
 
@@ -65,6 +63,9 @@ export default {
 		menuItems() {
 			return this.$store.state.menuItems;
 		},
+		langs() {
+			return this.$store.state.locales;
+		},
 	},
 
 	methods: {
@@ -74,6 +75,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-navigation-drawer--bottom.v-navigation-drawer--is-mobile {
+	max-height: 60% !important;
+}
+
 .mobile-menu-item {
 	display: block;
 	position: relative;
@@ -107,8 +112,6 @@ export default {
 }
 
 .drawer-menu-active {
-	/* border-top: thin solid var(--v-text-base);
-  border-bottom: thin solid var(--v-text-base); */
 	background-color: var(--v-basis-base);
 }
 
