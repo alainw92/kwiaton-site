@@ -23,8 +23,8 @@
 				:key="item.src"
 				:to="localePath(item.src)"
 				v-ripple
+				:data-name="item.name"
 				class="mobile-menu-item"
-				exact-active-class="drawer-menu-active"
 				>{{ $t(`menu.${item.name}`) }}</nuxt-link
 			>
 
@@ -109,10 +109,11 @@ export default {
 	&:hover::before {
 		opacity: 0.5;
 	}
-}
 
-.drawer-menu-active {
-	background-color: var(--v-basis-base);
+	&.nuxt-link-active:not([data-name*="Home"]),
+	&.nuxt-link-exact-active[data-name*="Home"] {
+		background-color: var(--v-basis-base);
+	}
 }
 
 .theme--light.v-navigation-drawer {

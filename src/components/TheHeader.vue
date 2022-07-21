@@ -15,42 +15,44 @@
 
 <template>
 	<header>
-		<v-container class="logo-wrapper d-flex align-stretch justify-space-between">
-			<nuxt-link to="/" class="logo-link">
-				<v-img
-					src="img/logo-xl.png"
-					contain
-					aspect-ratio="3.24"
-					width="100%"
-					class="logo__img"
-					alt="Logo firmy Kwiaton."
-				></v-img>
-			</nuxt-link>
-			<div v-if="!isMobile" class="d-flex flex-column justify-space-between">
-				<div class="d-flex">
-					<div v-for="lang in langs" :key="lang.name">
-						<nuxt-link :to="switchLocalePath(lang.locale)" class="lang-link">{{ lang.text }}</nuxt-link>
+		<div class="header-wrapper">
+			<v-container class="logo-wrapper d-flex align-stretch justify-space-between">
+				<nuxt-link :to="localePath('/')" class="logo-link">
+					<v-img
+						src="img/logo.png"
+						contain
+						aspect-ratio="3.24"
+						width="100%"
+						class="logo__img"
+						alt="Logo firmy Kwiaton."
+					></v-img>
+				</nuxt-link>
+				<div v-if="!isMobile" class="d-flex flex-column justify-space-between">
+					<div class="d-flex">
+						<div v-for="lang in langs" :key="lang.name">
+							<nuxt-link :to="switchLocalePath(lang.locale)" class="lang-link ml-1">{{ lang.text }}</nuxt-link>
+						</div>
+					</div>
+					<div>
+						<v-btn large icon tile :href="facebookUrl" target="_blank" class="float-right">
+							<v-icon-fb color-on-hover large></v-icon-fb>
+						</v-btn>
 					</div>
 				</div>
-				<div>
-					<v-btn large icon tile :href="facebookUrl" target="_blank" class="float-right">
-						<v-icon-fb color-on-hover large></v-icon-fb>
+				<div v-if="isMobile" class="d-flex align-center">
+					<v-btn icon large class="menu-trigger__btn" @click="toggleMenu(isMenuEnabled)">
+						<v-icon large>$menu</v-icon>
 					</v-btn>
 				</div>
-			</div>
-			<div v-if="isMobile" class="d-flex align-center">
-				<v-btn icon large class="menu-trigger__btn" @click="toggleMenu(isMenuEnabled)">
-					<v-icon large>$menu</v-icon>
-				</v-btn>
-			</div>
-		</v-container>
+			</v-container>
+		</div>
 		<!-- MENU STRIP -->
 		<div class="menu-wrapper">
 			<v-container v-if="!isMobile" class="py-1">
 				<div class="main-menu">
 					<ul>
 						<li v-for="item in menuItems" :key="item.src">
-							<nuxt-link :to="localePath(item.src)">{{ $t(`menu.${item.name}`) }}</nuxt-link>
+							<nuxt-link :to="localePath(item.src)" :data-name="item.name">{{ $t(`menu.${item.name}`) }}</nuxt-link>
 						</li>
 					</ul>
 				</div>
@@ -106,19 +108,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (min-width: 1264px) {
+	.container {
+		max-width: 1185px !important;
+	}
+}
+
 header {
 	margin-bottom: 0.5em;
 }
 
+.header-wrapper {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		background-image: url("/img/stucco.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 120% auto;
+		opacity: 0.5;
+	}
+}
+
 .logo-wrapper {
+	position: relative;
 	height: clamp(5rem, 25vw, 8rem);
 	padding: 1rem 1rem;
+	z-index: 1;
 
 	.logo-link {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: clamp(150px, 40vw, 250px);
+	}
+
+	.logo__img {
+		filter: saturate(50%);
 	}
 }
 
@@ -176,7 +209,8 @@ header {
 					opacity: 0.8;
 				}
 
-				&.nuxt-link-exact-active {
+				&.nuxt-link-active:not([data-name*="Home"]),
+				&.nuxt-link-exact-active[data-name*="Home"] {
 					background-color: var(--v-text-base);
 					color: var(--v-bgLight-base);
 				}

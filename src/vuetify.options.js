@@ -8,6 +8,8 @@ export default {
 		iconfont: "fa",
 		values: {
 			close: "fas fa-times",
+			left: "fas fa-circle-chevron-left",
+			right: "fas fa-circle-chevron-right",
 			menu: "fas fa-bars",
 			//
 			address: "fas fa-map-location-dot",

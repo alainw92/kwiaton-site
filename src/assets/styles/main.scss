@@ -34,12 +34,14 @@ html {
 	padding: 4px 8px;
 	line-height: 1em;
 	color: var(--v-text-base) !important;
-	transition: background-color 0.3s;
+	transition: border-color 0.3s;
+	border: thin solid transparent;
 
 	&:hover,
 	&.nuxt-link-exact-active {
 		text-decoration: none !important;
-		background-color: var(--v-basis-base);
+		/* background-color: var(--v-basis-base); */
+		border-color: var(--v-text-base);
 	}
 }
 

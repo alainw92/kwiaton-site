@@ -76,7 +76,7 @@ export default {
 
 	plugins: [],
 
-	modules: ["@nuxtjs/i18n"],
+	modules: ["nuxt-route-meta", "@nuxtjs/i18n"],
 	buildModules: ["@nuxtjs/vuetify"],
 
 	vue: {

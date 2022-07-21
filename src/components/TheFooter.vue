@@ -79,6 +79,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (min-width: 1264px) {
+	.container {
+		max-width: 1185px !important;
+	}
+}
+
 .footer {
 	background-color: var(--v-bgLight-base);
 	border-top: thin solid var(--v-basis-base);

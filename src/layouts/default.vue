@@ -1,3 +1,26 @@
+<i18n>
+{
+	"pl": {
+		"cookies": "Ciasteczka",
+		"ok": "Rozumiem",
+		"cookies_text": "Ta strona używa ciasteczek (cookies), dzięi którym może działać lepiej.",
+		"cookies_link": "Dowiedz się więcej o ciasteczkach."
+	},
+	"en": {
+		"cookies": "Cookies",
+		"ok": "I understand",
+		"cookies_text": "This website uses cookies to make it work better.",
+		"cookies_link": "Find out more about cookies."
+	},
+	"de": {
+		"cookies": "Kekse",
+		"ok": "Ich verstehe",
+		"cookies_text": "Diese Seite verwendet Kekse (Cookies), damit sie besser funktionieren kann.",
+		"cookies_link": "Erfahren Sie mehr über Cookies."
+	}
+}
+</i18n>
+
 <template>
 	<v-app>
 		<transition name="slide-y-transition">
@@ -15,15 +38,15 @@
 		<!-- COOKIES DIALOG -->
 		<v-dialog v-model="cookiesAcceptedDialog" overlay-opacity="0.3" :max-width="isMobile ? '90%' : '50%'" width="600">
 			<card>
-				<v-card-title>Ciasteczka</v-card-title>
+				<v-card-title>{{ $t('cookies') }}</v-card-title>
 				<v-card-text>
-					Ta strona używa ciasteczek (cookies), dzięki którym może działać lepiej.
+					{{ $t('cookies_text') }}
 					<br />
-					<a href="http://wszystkoociasteczkach.pl" target="_blank">Dowiedz się więcej o ciasteczkach.</a>
+					<a href="http://wszystkoociasteczkach.pl" target="_blank">{{ $t('cookies_link') }}</a>
 				</v-card-text>
 				<v-card-actions>
 					<v-spacer></v-spacer>
-					<v-btn tile outlined color="text" @click="closeCookiesWindow()">Rozumiem</v-btn>
+					<v-btn tile outlined color="text" @click="closeCookiesWindow()">{{ $t('ok') }}</v-btn>
 				</v-card-actions>
 			</card>
 		</v-dialog>

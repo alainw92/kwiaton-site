@@ -1,23 +1,94 @@
+<i18n>
+{
+	"pl": {
+		"welcome": "Witamy",
+		"welcomeText": "Firma powstała 5 września 1991 roku w Boguchwale przy ulicy Tkaczowej 188. Prace wykończeniowe o charakterze artysycznym oraz renowacje budynków zabytkowych i historycznych są głównym przedmiotem naszej działalności.",
+		"cardPhotos": {
+			"balustrades": {
+				"title": "Balustrady",
+				"alt": "Zdjęcie domu z balustradą betonową"
+			},
+			"details": {
+				"title": "Detale",
+				"alt": ""
+			},
+			"interiors": {
+				"title": "Wnętrza",
+				"alt": ""
+			},
+			"sculptures": {
+				"title": "Rzeźby",
+				"alt": ""
+			}
+		}
+	},
+	"en": {
+		"welcome": "Welcome",
+		"welcomeText": "The company was founded on September 5, 1991 in Boguchwała, Poland. Finishing works of an artistic nature and renovation of historical buildings are the main subject of our activity.",
+		"cardPhotos": {
+			"balustrades": {
+				"title": "Balustrades",
+				"alt": "Photo of the house with concrete balustrade"
+			},
+			"details": {
+				"title": "Details",
+				"alt": ""
+			},
+			"interiors": {
+				"title": "Interiors",
+				"alt": ""
+			},
+			"sculptures": {
+				"title": "Sculptures",
+				"alt": ""
+			}
+		}
+	},
+	"de": {
+		"welcome": "Herzlich willkommen",
+		"welcomeText": "Das Unternehmen wurde am 5. September 1991 in Boguchwała in Tkaczowa 188 gegründet. Hauptgegenstand unserer Tätigkeit sind künstlerische Ausbauarbeiten und die Renovierung historischer Gebäude.",
+		"cardPhotos": {
+			"balustrades": {
+				"title": "Geländer",
+				"alt": "Foto des Hauses mit Betonbalustrade"
+			},
+			"details": {
+				"title": "Einzelheiten",
+				"alt": ""
+			},
+			"interiors": {
+				"title": "Innenräume",
+				"alt": ""
+			},
+			"sculptures": {
+				"title": "Skulpturen",
+				"alt": ""
+			}
+		}
+	}
+}
+</i18n>
+
 <template>
 	<main :style="cssProps">
 		<v-row>
 			<v-col cols="12">
 				<card>
 					<div class="bordered pa-6">
-						<h1 class="text-h4 ml-6 mb-4">Witamy</h1>
-						<p class="mb-0">
-							Firma powstała 5 września 1991 roku w Boguchwale przy ulicy Tkaczowej 188. Prace wykończeniowe o
-							charakterze artysycznym oraz renowacje budynków zabytkowych i historycznych są głównym przedmiotem
-							naszej działalności.
-						</p>
+						<h1 class="text-h4 ml-6 mb-4">{{ $t("welcome") }}</h1>
+						<p class="mb-0">{{ $t("welcomeText") }}</p>
 					</div>
 				</card>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col cols="12" class="main-card">
-				<card-photo :name="mainCard.name" :img-src="mainCard.imgSrc" :href="mainCard.href" :alt="mainCard.alt">
-					TEST
+				<card-photo
+					:name="$t(`cardPhotos.${mainCard.name}.title`)"
+					:img-src="mainCard.imgSrc"
+					:href="mainCard.href"
+					:alt="$t(`cardPhotos.${mainCard.name}.alt`)"
+				>
 				</card-photo>
 			</v-col>
 		</v-row>
@@ -29,7 +100,12 @@
 				:md="12 / secondaryCards.length"
 				:style="{ height: cardHeight }"
 			>
-				<card-photo :name="card.name" :img-src="card.imgSrc" :href="card.href" :alt="card.alt"></card-photo>
+				<card-photo
+					:name="$t(`cardPhotos.${card.name}.title`)"
+					:img-src="card.imgSrc"
+					:href="card.href"
+					:alt="$t(`cardPhotos.${card.name}.alt`)"
+				></card-photo>
 			</v-col>
 		</v-row>
 	</main>
@@ -50,15 +126,14 @@ export default {
 			cardHeight: "30rem",
 			cardPhotos: [
 				{
-					name: "Balustrady",
+					name: "balustrades",
 					imgSrc: "photos/balustrada.jpg",
 					href: "a",
-					alt: "Zdjęcie domu z balustradą betonową",
 					isMain: true,
 				},
-				{ name: "Detale", imgSrc: "photos/plaskorzezba.jpg", href: "b", alt: "fota 2", isMain: false },
-				{ name: "Wnętrza", imgSrc: "photos/wnetrze.jpg", href: "c", alt: "fota 3", isMain: false },
-				{ name: "Rzeźby", imgSrc: "photos/rzezba.jpg", href: "d", alt: "fota 4", isMain: false },
+				{ name: "details", imgSrc: "photos/plaskorzezba.jpg", href: "b", isMain: false },
+				{ name: "interiors", imgSrc: "photos/wnetrze.jpg", href: "c", isMain: false },
+				{ name: "sculptures", imgSrc: "photos/rzezba.jpg", href: "d", isMain: false },
 			],
 		};
 	},
@@ -67,18 +142,16 @@ export default {
 		mainCard() {
 			return this.cardPhotos.find((card) => card.isMain);
 		},
-		mainCardHeight() {
-
-		},
+		mainCardHeight() {},
 		secondaryCards() {
 			return this.cardPhotos.filter((card) => !card.isMain);
 		},
 
 		cssProps() {
 			return {
-				'--card-height': this.cardHeight
-			}
-		}
+				"--card-height": this.cardHeight,
+			};
+		},
 	},
 };
 </script>

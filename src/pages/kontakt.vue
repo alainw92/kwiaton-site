@@ -51,13 +51,13 @@ export default {
 		paths: {
 			pl: "/kontakt", // -> accessible at /kontakt (no prefix since it's the default locale)
 			en: "/contact", // -> accessible at /en/contact
-			de: "/kontakte", // -> accessible at /de/kontakte
+			de: "/kontakt", // -> accessible at /de/kontakte
 		},
 	},
 
 	head() {
 		return {
-			title: "Kontakt",
+			title: this.$t('contact'),
 		};
 	},
 
