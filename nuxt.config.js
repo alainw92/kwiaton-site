@@ -33,6 +33,7 @@ export default {
 			meta: [
 				{ charset: "utf-8" },
 				{ name: "viewport", content: "width=device-width, initial-scale=1" },
+				{ name: "author", content: "Alan Wnęk (alan.wnek@gmail.com)" },
 				...i18nHead.meta,
 			],
 			link: [
@@ -51,8 +52,8 @@ export default {
 		};
 	},
 	loading: {
-		color: "#118511",
-		height: "3px",
+		color: "#8F774D",
+		height: "5px",
 		throttle: 0,
 		continuous: true,
 	},

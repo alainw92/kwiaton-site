@@ -21,7 +21,7 @@ export default {
 		return {
 			photosMainPath: "photos/oferta/kolumny/",
 			photos: [
-				{ src: "1.webp", alt: "Dworek", title: "Dworek", description: "Niezły dwór tam gdzie wór schodzi się z jajami" },
+				{ src: "1.webp", alt: "Dworek", title: "Dworek", description: "Niezły dwór tam gdzie chiński mur" },
 				{ src: "2.webp", alt: "Dworek", title: "", description: "" },
 				{ src: "3.webp", alt: "Dworek", title: "", description: "" },
 				{ src: "4.webp", alt: "Dworek", title: "KL2", description: "49,5 x 50 x 23 cm" },
