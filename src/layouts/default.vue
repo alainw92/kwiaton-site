@@ -38,15 +38,15 @@
 		<!-- COOKIES DIALOG -->
 		<v-dialog v-model="cookiesAcceptedDialog" overlay-opacity="0.3" :max-width="isMobile ? '90%' : '50%'" width="600">
 			<card>
-				<v-card-title>{{ $t('cookies') }}</v-card-title>
+				<v-card-title>{{ $t("cookies") }}</v-card-title>
 				<v-card-text>
-					{{ $t('cookies_text') }}
+					{{ $t("cookies_text") }}
 					<br />
-					<a href="http://wszystkoociasteczkach.pl" target="_blank">{{ $t('cookies_link') }}</a>
+					<a href="http://wszystkoociasteczkach.pl" target="_blank">{{ $t("cookies_link") }}</a>
 				</v-card-text>
 				<v-card-actions>
 					<v-spacer></v-spacer>
-					<v-btn tile outlined color="text" @click="closeCookiesWindow()">{{ $t('ok') }}</v-btn>
+					<v-btn tile outlined color="text" @click="closeCookiesWindow()">{{ $t("ok") }}</v-btn>
 				</v-card-actions>
 			</card>
 		</v-dialog>
@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import cookiesMixin from '~/mixins/cookiesMixin.js';
+import cookiesMixin from "~/mixins/cookiesMixin.js";
 import { debounce } from "~/helpers/debounce.js";
 import { mapMutations } from "vuex";
 
@@ -62,6 +62,17 @@ export default {
 	name: "DefaultLayout",
 
 	mixins: [cookiesMixin],
+
+	head() {
+		const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
+		return {
+			htmlAttrs: {
+				...i18nHead.htmlAttrs,
+			},
+			meta: [...i18nHead.meta],
+			link: [...i18nHead.link],
+		};
+	},
 
 	data() {
 		return {

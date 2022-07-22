@@ -23,7 +23,6 @@ export default {
 	},
 	//
 	head() {
-		const i18nHead = this.$nuxtI18nHead ? this.$nuxtI18nHead({ addSeoAttributes: true }) : { link: {}, meta: {} };
 		return {
 			titleTemplate: (titleChunk) => (titleChunk ? `Kwiaton - ${titleChunk}` : "Kwiaton"),
 			htmlAttrs: {
@@ -34,7 +33,18 @@ export default {
 				{ charset: "utf-8" },
 				{ name: "viewport", content: "width=device-width, initial-scale=1" },
 				{ name: "author", content: "Alan Wnęk (alan.wnek@gmail.com)" },
-				...i18nHead.meta,
+				{
+					hid: "keywords",
+					name: "keywords",
+					content:
+						"gzymsy, renowacje budynków, produkcja elementów sztukatorskich, sztukateria, sztukatorstwo, zabytki, formy architektoniczne",
+				},
+				{
+					hid: "description",
+					name: "description",
+					content:
+						"Prace wykończeniowe o charakterze artystycznym oraz renowacje budynków zabytkowych i historycznych. Aranżacje wnętrz, gzymsy, balustrady, sztukateria...",
+				},
 			],
 			link: [
 				{ rel: "favicon", href: "favicon.ico" },
@@ -46,7 +56,6 @@ export default {
 					rel: "stylesheet",
 					href: "https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap",
 				},
-				...i18nHead.link,
 			],
 			noscript: [{ innerHTML: "Przepraszamy. Strona wymaga włączonego JavaScript." }],
 		};
