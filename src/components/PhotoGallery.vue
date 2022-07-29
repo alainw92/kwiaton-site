@@ -7,7 +7,7 @@
 						cover
 						:lazy-src="`${folder}${photoSuperMinSrc(photo.src)}`"
 						:src="`${folder}${photoMinSrc(photo.src)}`"
-						:alt="photo.alt"
+						:alt="photo.alt ? photo.alt : ''"
 						aspect-ratio="1"
 						class="image grey lighten-2"
 						:class="{ 'elevation-5': hover }"

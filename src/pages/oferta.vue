@@ -12,7 +12,7 @@
 		"fences": "Ogrodzenia",
 		"fountains": "Fontanny",
 		"garden": "Ogród",
-		"sculptures": "Rzeźby",
+		"sculptures": "Rzeźby i pomniki",
 		"reliefs": "Płaskorzeźby",
 		"interiors": "Wnętrza",
 		"unusual": "Nietypowe realizacje",
@@ -40,7 +40,7 @@
 		"fences": "Fences",
 		"fountains": "Fountains",
 		"garden": "Garden",
-		"sculptures": "Sculptures",
+		"sculptures": "Sculptures & Statues",
 		"reliefs": "Reliefs",
 		"interiors": "Interiors",
 		"unusual": "Unusual realizations",
@@ -68,7 +68,7 @@
 		"fences": "Fences",
 		"fountains": "Fountains",
 		"garden": "Garden",
-		"sculptures": "Sculptures",
+		"sculptures": "Skulpturen und Denkmäler",
 		"reliefs": "Reliefs",
 		"interiors": "Interiors",
 		"unusual": "Unusual realizations",
@@ -78,7 +78,7 @@
 		"sconces": "Scones",
 		"pilasters": "Pilasters",
 		"rosettes": "Rosettes",
-		"crowns": "Crowns"
+		"crowns": "Schlüsselsteine"
 	 },
 	 "articleHeading": "Gibt es etwas, das wir nicht tun werden?",
 	 "paragraph1": "Die Realität, die uns umgibt, bringt neue Moden und Trends, auch in Architektur und Innenarchitektur. Wir glauben jedoch, dass das Schönste das ist, was harmonisch und in den Proportionen perfekt ausbalanciert ist - die Inspiration für unsere Arbeit ist die Kunst des antiken Griechenlands und Roms. Seit 1991 teilen wir mit Ihnen die Leidenschaft der Kreation und entdecken die Geheimnisse, die in klassischer Schönheit verborgen sind.",
@@ -129,9 +129,15 @@
 					<transition name="fade-transition" mode="out-in">
 						<div v-if="isMainOfferRoute" key="MainOffer" class="pa-4">
 							<article class="text-justify text-indent">
-								<h2 class="text-h6 mb-4">{{ $t('articleHeading') }}</h2>
-								<p>{{ $t('paragraph1') }}</p>
-								<p>{{ $t('paragraph2') }}</p>
+								<h2 class="text-h6 mb-4">{{ $t("articleHeading") }}</h2>
+								<p>{{ $t("paragraph1") }}</p>
+								<p>{{ $t("paragraph2") }}</p>
+								<p>
+									<v-btn text href="/katalog_kwiaton_pracownia_sztukatorska.pdf" color="red" target="_blank"
+										><v-icon class="mr-3">fas fa-file-pdf</v-icon>
+										Pobierz nasz katalog PDF</v-btn
+									>
+								</p>
 							</article>
 							<photo-gallery :folder="photosMainPath" :photos="photos" class="mt-10"></photo-gallery>
 						</div>
@@ -202,7 +208,7 @@ export default {
 	},
 
 	created() {
-		this.selectedCategory = this.localePath(this.$route.path, 'pl');
+		this.selectedCategory = this.localePath(this.$route.path, "pl");
 	},
 
 	watch: {
@@ -211,8 +217,8 @@ export default {
 				const path = this.localePath(newVal);
 				this.$router.push(path);
 			}
-		}
-	}
+		},
+	},
 };
 </script>
 
