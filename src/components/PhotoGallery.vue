@@ -23,7 +23,7 @@
 							<v-expand-transition v-if="photo.title || photo.description">
 								<div
 									class="d-flex transition-fast-in-fast-out text v-card--reveal white--text"
-									:style="{ height: hover ? '50%' : '25%' }"
+									:style="{ height: hover && photo.description ? '50%' : '25%' }"
 								>
 									<div class="text-center px-2">
 										<h3 class="text-subtitle-1">{{ photo.title }}</h3>

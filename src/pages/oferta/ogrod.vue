@@ -1,5 +1,5 @@
 <template>
-  <section class="pa-4">
+	<section class="pa-4">
 		<h2 class="text-h5 mb-6">Ogród</h2>
 		<photo-gallery :folder="photosMainPath" :photos="photos"></photo-gallery>
 	</section>
@@ -42,7 +42,7 @@ export default {
 				{ src: "19.webp", alt: "", title: "", description: "" },
 				{ src: "20.webp", alt: "", title: "", description: "" },
 			],
-		}
-	}
-}
+		};
+	},
+};
 </script>

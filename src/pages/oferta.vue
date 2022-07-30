@@ -3,6 +3,7 @@
   "pl": {
     "pageHeading": "Oferta",
     "offer": "Oferta",
+    "details": "Detale",
 	 "categories": {
 		"offer": "Oferta",
 		"restorations": "Renowacje",
@@ -31,6 +32,7 @@
   "en": {
     "pageHeading": "Offer",
     "offer": "Offer",
+    "details": "Details",
 	 "categories": {
 		"offer": "Offer",
 		"restorations": "Restorations",
@@ -59,6 +61,7 @@
   "de": {
     "pageHeading": "Angebot",
     "offer": "Angebot",
+    "details": "Details",
 	 "categories": {
 		"offer": "Angebot",
 		"restorations": "Restorations",
@@ -100,7 +103,7 @@
 					item-color="secondary"
 					class="d-block d-md-none"
 					append-icon="fas fa-caret-down"
-					:items="[{ name: 'offer', src: '/oferta' }, ...categories]"
+					:items="[{ name: 'offer', src: '/oferta' }, ...categoriesMain, ...categoriesDetails]"
 					item-value="src"
 					v-model="selectedCategory"
 				>
@@ -115,7 +118,15 @@
 					<div>
 						<nuxt-link :to="localePath('oferta')" class="offer-link main-link">{{ $t("offer") }}</nuxt-link>
 						<nuxt-link
-							v-for="category in categories"
+							v-for="category in categoriesMain"
+							:key="category.name"
+							:to="localePath(category.src)"
+							class="offer-link"
+							>{{ $t(`categories.${category.name}`) }}</nuxt-link
+						>
+						<nuxt-link :to="localePath('/oferta/detale')" class="offer-link main-link">{{ $t("details") }}</nuxt-link>
+						<nuxt-link
+							v-for="category in categoriesDetails"
 							:key="category.name"
 							:to="localePath(category.src)"
 							class="offer-link"
@@ -169,7 +180,7 @@ export default {
 
 	data() {
 		return {
-			categories: [
+			categoriesMain: [
 				{ name: "restorations", src: "/oferta/renowacje" },
 				{ name: "facades", src: "/oferta/elewacje" },
 				{ name: "balustrades", src: "/oferta/balustrady" },
@@ -181,7 +192,8 @@ export default {
 				{ name: "reliefs", src: "/oferta/plaskorzezby" },
 				{ name: "interiors", src: "/oferta/wnetrza" },
 				{ name: "unusual", src: "/oferta/nietypowe" },
-				// detale
+			],
+			categoriesDetails: [
 				{ name: "decors", src: "/oferta/dekory" },
 				{ name: "cornices", src: "/oferta/gzymsy" },
 				{ name: "cartouches_crests", src: "/oferta/kartusze_herby" },
