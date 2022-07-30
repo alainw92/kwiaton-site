@@ -2,8 +2,8 @@
   <section class="pa-4">
 		<h2 class="text-h5 mb-6">Zworniki</h2>
 		<p>Elementy zwieńczające gzymsów.</p>
-		<photo-gallery :folder="photosMainPath" :photos="gallery"></photo-gallery>
-		<h3 class="text-h6 my-4">Przykłady</h3>
+		<photo-gallery contain :folder="photosMainPath" :photos="gallery"></photo-gallery>
+		<h3 class="text-h6 my-6">Przykłady</h3>
 		<photo-gallery :folder="photosMainPath" :photos="photos"></photo-gallery>
 	</section>
 </template>

@@ -194,9 +194,14 @@ export default {
 
 			photosMainPath: "photos/oferta/",
 			photos: [
-				{ src: "1.webp", alt: "Dworek", title: "", description: "" },
-				{ src: "7.webp", alt: "Ogród", title: "", description: "" },
-				{ src: "8.webp", alt: "Kolumna", title: "", description: "" },
+				{ src: "1.webp", alt: "Wyróżnienie Wojewody Podkarpackiego", title: "", description: "" },
+				{ src: "2.webp", alt: "Złoty medal od InterRes - Home Building 2005", title: "", description: "" },
+				{
+					src: "3.webp",
+					alt: "Podziękowanie i medal za renowację kościoła Chrystusa Króla w Rzeszowie",
+					title: "",
+					description: "",
+				},
 			],
 		};
 	},

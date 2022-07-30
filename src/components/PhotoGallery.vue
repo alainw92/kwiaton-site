@@ -4,7 +4,8 @@
 			<v-col v-for="photo in photos" :key="photo.src" cols="12" sm="6" lg="4" class="d-flex">
 				<v-hover close-delay="300" v-slot="{ hover }">
 					<v-img
-						cover
+						:cover="!contain"
+						:contain="contain"
 						:lazy-src="`${folder}${photoSuperMinSrc(photo.src)}`"
 						:src="`${folder}${photoMinSrc(photo.src)}`"
 						:alt="photo.alt ? photo.alt : ''"
@@ -39,7 +40,7 @@
 		</v-row>
 
 		<!-- DIALOG -->
-		<v-dialog v-model="isPhotoDialog" max-width="1100px">
+		<v-dialog v-if="isPhotoDialog" v-model="isPhotoDialog" max-width="1100px">
 			<card color="bg" class="photo-dialog d-flex flex-column pa-4 relative">
 				<v-row no-gutters style="max-height: 40px">
 					<v-col>
@@ -136,6 +137,11 @@ export default {
 				return [];
 			},
 		},
+
+		contain: {
+			type: Boolean,
+			default: false
+		}
 	},
 
 	computed: {
@@ -155,6 +161,8 @@ export default {
 			this.isPhotoDialog = true;
 		},
 		closeDialog() {
+			this.isPhotoDialog = false;
+			//
 			this.photoActive = {
 				src: "",
 				alt: "",
@@ -163,7 +171,6 @@ export default {
 				//
 				isCred: false,
 			};
-			this.isPhotoDialog = false;
 		},
 
 		prevPhoto() {

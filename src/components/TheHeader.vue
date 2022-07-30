@@ -115,7 +115,7 @@ export default {
 }
 
 header {
-	margin-bottom: 0.5em;
+	margin-bottom: 1.5em;
 }
 
 .header-wrapper {
