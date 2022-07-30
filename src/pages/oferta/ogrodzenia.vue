@@ -30,6 +30,7 @@ export default {
 				{ src: "7.webp", alt: "", title: "", description: "" },
 				{ src: "8.webp", alt: "", title: "", description: "" },
 				{ src: "9.webp", alt: "", title: "", description: "" },
+				{ src: "10.webp", alt: "", title: "", description: "" },
 				{ src: "11.webp", alt: "", title: "", description: "" },
 				{ src: "12.webp", alt: "", title: "", description: "" },
 				{ src: "13.webp", alt: "", title: "", description: "" },
