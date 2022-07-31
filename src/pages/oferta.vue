@@ -116,7 +116,8 @@
 				</v-select>
 				<card class="d-none d-md-block">
 					<div>
-						<nuxt-link :to="localePath('oferta')" class="offer-link main-link">{{ $t("offer") }}</nuxt-link>
+						<nuxt-link :to="localePath('oferta')" class="offer-link mb-8">{{ $t("offer") }}</nuxt-link>
+
 						<nuxt-link
 							v-for="category in categoriesMain"
 							:key="category.name"
@@ -124,7 +125,7 @@
 							class="offer-link"
 							>{{ $t(`categories.${category.name}`) }}</nuxt-link
 						>
-						<nuxt-link :to="localePath('/oferta/detale')" class="offer-link main-link">{{ $t("details") }}</nuxt-link>
+						<div class="mb-8"></div>
 						<nuxt-link
 							v-for="category in categoriesDetails"
 							:key="category.name"
@@ -256,9 +257,9 @@ export default {
 		text-decoration: none;
 	}
 
-	&:not(.main-link) {
+	/* &:not(.main-link) {
 		padding-left: 2em;
-	}
+	} */
 
 	&.nuxt-link-exact-active {
 		background-color: var(--v-secondary-base);

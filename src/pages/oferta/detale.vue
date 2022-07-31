@@ -1,5 +1,8 @@
 <template>
-  <div>Detale architektoniczne</div>
+  <section class="pa-4">
+		<h2 class="text-h5 mb-6">Detale architektoniczne</h2>
+		<p>Oferujemy również oddzielnie detale architektoniczne. Prosimy o zapoznanie się z </p>
+	</section>
 </template>
 
 <script>

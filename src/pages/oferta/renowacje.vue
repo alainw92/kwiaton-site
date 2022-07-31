@@ -43,8 +43,7 @@ export default {
 				{ src: "19.webp", alt: "", title: "", description: "" },
 				{ src: "20.webp", alt: "", title: "", description: "" },
 				{ src: "21.webp", alt: "", title: "", description: "" },
-				{ src: "22.webp", alt: "", title: "", description: "" },
-				{ src: "23.webp", alt: "", title: "", description: "" },
+				//
 				{ src: "24.webp", alt: "", title: "", description: "" },
 				{ src: "25.webp", alt: "", title: "", description: "" },
 				{ src: "26.webp", alt: "", title: "", description: "" },

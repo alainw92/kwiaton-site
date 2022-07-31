@@ -38,7 +38,6 @@ export default {
 				{ src: "15.webp", alt: "", title: "", description: "" },
 				{ src: "16.webp", alt: "", title: "", description: "" },
 				{ src: "17.webp", alt: "", title: "", description: "" },
-				{ src: "18.webp", alt: "", title: "", description: "" },
 			],
 		}
 	}
