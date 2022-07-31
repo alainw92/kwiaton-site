@@ -50,6 +50,23 @@
 				</v-card-actions>
 			</card>
 		</v-dialog>
+
+		<!-- SCROLL BTN -->
+		<v-fab-transition>
+			<v-btn
+				v-show="!hiddenScrollBtn"
+				color="text"
+				fab
+				dark
+				small
+				fixed
+				bottom
+				right
+				@click="scrollTop"
+			>
+				<v-icon>$up</v-icon>
+			</v-btn>
+		</v-fab-transition>
 	</v-app>
 </template>
 
@@ -78,6 +95,7 @@ export default {
 		return {
 			loading: true,
 			cookiesAcceptedDialog: false,
+			hiddenScrollBtn: true,
 		};
 	},
 
@@ -89,6 +107,17 @@ export default {
 
 	methods: {
 		...mapMutations(["setMobile"]),
+
+		onScroll() {
+			if (window.scrollY > 1.5 * window.innerHeight) {
+				this.hiddenScrollBtn = false;
+			} else {
+				this.hiddenScrollBtn = true;
+			}
+		},
+		scrollTop() {
+			this.$vuetify.goTo(0, { duration: 300 })
+		},
 
 		// cookies
 		closeCookiesWindow() {
@@ -110,6 +139,13 @@ export default {
 			"resize",
 			debounce(() => {
 				this.setMobile(window.innerWidth < 600);
+			}, 100)
+		);
+		//
+		window.addEventListener(
+			"scroll",
+			debounce(() => {
+				this.onScroll();
 			}, 100)
 		);
 		this.loading = false;

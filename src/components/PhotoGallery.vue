@@ -89,14 +89,14 @@
 				</transition>
 				<v-row v-if="!isMobile" class="ma-n4 full-height full-width absolute">
 					<v-col cols="6" sm="4" md="2" class="d-flex align-center justify-start">
-						<v-btn fab small color="bgLight" class="ma-2" @click.stop="prevPhoto()">
-							<v-icon large>$left</v-icon>
+						<v-btn color="text" class="ma-2 btn-chevron" @click.stop="prevPhoto()">
+							<v-icon color="bgLight">$left</v-icon>
 						</v-btn>
 					</v-col>
 					<v-spacer></v-spacer>
 					<v-col cols="6" sm="4" md="2" class="d-flex align-center justify-end">
-						<v-btn fab small color="bgLight" class="ma-2" @click.stop="nextPhoto()">
-							<v-icon large>$right</v-icon>
+						<v-btn color="text" class="ma-2 btn-chevron" @click.stop="nextPhoto()">
+							<v-icon color="bgLight">$right</v-icon>
 						</v-btn>
 					</v-col>
 				</v-row>
@@ -257,6 +257,11 @@ export default {
 
 .absolute {
 	position: absolute;
+}
+
+.btn-chevron {
+	padding: 8px !important;
+	min-width: 36px !important;
 }
 
 /* .slide-left-enter-active,

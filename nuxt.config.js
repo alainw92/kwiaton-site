@@ -1,16 +1,11 @@
 // import { resolve } from "path";
 
 const _DOMAIN = "https://kwiaton-sztukatorstwo.com.pl/";
-const _DIR = "test/";
+const _DIR = "";
 
 export default {
 	dev: true,
-	// ssr: false,
 	target: "static",
-	generate: {
-		// dir: 'gh_pages', // gh_pages/ instead of dist/
-		// subFolders: true, // HTML files are generated according to the route path (default)
-	},
 	build: {
 		extractCSS: true,
 	},
@@ -66,39 +61,22 @@ export default {
 		throttle: 0,
 		continuous: true,
 	},
-	/* loadingIndicator: {
-		name: "rectangle-bounce",
-		color: "#574834",
-		background: "#d8d2c8",
-	}, */
-	alias: {
-		// style: resolve(__dirname, "./assets/style"),
-	},
 
 	components: true,
 
 	css: ["@/assets/styles/main", "@/assets/styles/animate.min", "@fortawesome/fontawesome-free/css/all.css"],
-
-	/* pageTransition: {
-		name: "page",
-		mode: "",
-	}, */
 
 	plugins: [],
 
 	modules: ["nuxt-route-meta", "@nuxtjs/i18n"],
 	buildModules: ["@nuxtjs/vuetify"],
 
-	vue: {
-		config: {
-			// productionTip: false,
-			// devtools: false,
-		},
-	},
-
 	vuetify: {
 		customVariables: ["~/assets/styles/vuetify-variables.scss"],
 		optionsPath: "./vuetify.options.js",
+		defaultAssets: {
+			icons: "fa",
+		},
 		treeShake: true,
 	},
 

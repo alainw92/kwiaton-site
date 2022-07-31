@@ -6,19 +6,19 @@
 		"cardPhotos": {
 			"balustrades": {
 				"title": "Balustrady",
-				"alt": "Zdjęcie domu z balustradą betonową"
+				"alt": "Dom z balustradą betonową"
 			},
-			"details": {
-				"title": "Detale",
-				"alt": ""
+			"garden": {
+				"title": "Ogród",
+				"alt": "Altana betonowa do ogrodu"
 			},
 			"interiors": {
 				"title": "Wnętrza",
-				"alt": ""
+				"alt": "Wnętrze sali ze sztukaterią"
 			},
-			"sculptures": {
-				"title": "Rzeźby",
-				"alt": ""
+			"restorations": {
+				"title": "Renowacje",
+				"alt": "Odrestaurowana elewacja kamienicy"
 			}
 		}
 	},
@@ -30,17 +30,17 @@
 				"title": "Balustrades",
 				"alt": "Photo of the house with concrete balustrade"
 			},
-			"details": {
-				"title": "Details",
-				"alt": ""
+			"garden": {
+				"title": "Garden",
+				"alt": "Concrete gazebo for the garden"
 			},
 			"interiors": {
 				"title": "Interiors",
-				"alt": ""
+				"alt": "The interior of the hall with stucco"
 			},
-			"sculptures": {
-				"title": "Sculptures",
-				"alt": ""
+			"restorations": {
+				"title": "Restorations",
+				"alt": "The renovated facade of the tenement house"
 			}
 		}
 	},
@@ -52,17 +52,17 @@
 				"title": "Geländer",
 				"alt": "Foto des Hauses mit Betonbalustrade"
 			},
-			"details": {
-				"title": "Einzelheiten",
-				"alt": ""
+			"garden": {
+				"title": "Garten",
+				"alt": "Betonpavillon für den Garten"
 			},
 			"interiors": {
 				"title": "Innenräume",
-				"alt": ""
+				"alt": "Das Innere der Halle mit Stuck"
 			},
-			"sculptures": {
-				"title": "Skulpturen",
-				"alt": ""
+			"restorations": {
+				"title": "Restaurierungen",
+				"alt": "Die renovierte Fassade des Mietshauses"
 			}
 		}
 	}
@@ -127,13 +127,13 @@ export default {
 			cardPhotos: [
 				{
 					name: "balustrades",
-					imgSrc: "photos/balustrada.jpg",
-					href: "a",
+					imgSrc: "photos/balustrada.webp",
+					href: "/oferta/balustrady",
 					isMain: true,
 				},
-				{ name: "details", imgSrc: "photos/plaskorzezba.jpg", href: "b", isMain: false },
-				{ name: "interiors", imgSrc: "photos/wnetrze.jpg", href: "c", isMain: false },
-				{ name: "sculptures", imgSrc: "photos/rzezba.jpg", href: "d", isMain: false },
+				{ name: "garden", imgSrc: "photos/ogrod.webp", href: "/oferta/ogrod", isMain: false },
+				{ name: "interiors", imgSrc: "photos/wnetrze.webp", href: "/oferta/wnetrza", isMain: false },
+				{ name: "restorations", imgSrc: "photos/renowacja.webp", href: "/oferta/renowacje", isMain: false },
 			],
 		};
 	},

@@ -1,16 +1,20 @@
 <template>
-	<v-card tile elevation="0" class="pa-1 full-height full-width relative" :style="{ '--title-height': titleHeight }">
+	<v-card tile elevation="0" nuxt :to="localePath(href)" class="pa-1 full-height full-width relative" :style="{ '--title-height': titleHeight }">
 		<div :style="{ height: titleHeight }" class="card-title">
 			{{ name }}
 		</div>
 		<div class="diamond"></div>
-		<!-- <transition name="slide-x-transition"> -->
-		<v-img :src="imgSrc" width="100%" :height="`calc(100% - ${titleHeight})`" transition="scroll-x-transition">
+		<v-img
+			:src="imgSrc"
+			:alt="alt"
+			width="100%"
+			:height="`calc(100% - ${titleHeight})`"
+			transition="scroll-x-transition"
+		>
 			<div class="img-ornament d-flex align-end">
 				<div v-if="isContent" class="card-content"><slot></slot></div>
 			</div>
 		</v-img>
-		<!-- </transition> -->
 	</v-card>
 </template>
 
@@ -60,7 +64,7 @@ export default {
 		},
 		isContent() {
 			return this.$slots.default && this.$slots.default.length;
-		}
+		},
 	},
 };
 </script>
@@ -110,7 +114,7 @@ export default {
 	padding: 16px 12px;
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;

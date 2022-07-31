@@ -3,7 +3,6 @@
   "pl": {
     "pageHeading": "Oferta",
     "offer": "Oferta",
-    "details": "Detale",
 	 "categories": {
 		"offer": "Oferta",
 		"restorations": "Renowacje",
@@ -27,12 +26,13 @@
 	 },
 	 "articleHeading": "Czy jest taka rzecz, której nie wykonamy?",
 	 "paragraph1": "Otaczająca nas rzeczywistość przynosi kolejne mody i trendy, także w architekturze i wystroju wnętrz. My uważamy jednak, że najpiękniejsze jest to co harmonijne, doskonale wyważone w proporcjach - inspiracją do naszej pracy jest sztuka starożytnej Grecji i Rzymu. Już od 1991 roku dzielimy się z Państwem pasją tworzenia, odkrywaniem tajemnic, które kryje w sobie klasyczne piękno.",
-	 "paragraph2": "Głównym przedmiotem naszej działalności są prace wykończeniowe o charakterze artystycznym oraz renowacje budynków zabytkowych. Specjalizujemy się w produkcji kolumn budowlanych, balustrad z tralek betonowych oraz detali architektonicznych do aranżacji wnętrz, elewacji i ogrodów. Sczególnie ważnym dla naszej firmy jest dział artystyczny, w którym realizujemy Państwa pomysły tworząc monumentalne rzeźby oraz rekonstrukcje detali architektonicznych - przykłady można mnożyć."
+	 "paragraph2": "Głównym przedmiotem naszej działalności są prace wykończeniowe o charakterze artystycznym oraz renowacje budynków zabytkowych. Specjalizujemy się w produkcji kolumn budowlanych, balustrad z tralek betonowych oraz detali architektonicznych do aranżacji wnętrz, elewacji i ogrodów. Sczególnie ważnym dla naszej firmy jest dział artystyczny, w którym realizujemy Państwa pomysły tworząc monumentalne rzeźby oraz rekonstrukcje detali architektonicznych - przykłady można mnożyć.",
+	 "welcome": "Zapraszamy do zapoznania się z ofertą w menu.",
+	 "download": "Pobierz katalog PDF"
   },
   "en": {
     "pageHeading": "Offer",
     "offer": "Offer",
-    "details": "Details",
 	 "categories": {
 		"offer": "Offer",
 		"restorations": "Restorations",
@@ -56,12 +56,13 @@
 	 },
 	 "articleHeading": "Is there something we won't do?",
 	 "paragraph1": "The reality that surrounds us brings new fashions and trends, also in architecture and interior design. We believe, however, that the most beautiful is what is harmonious, perfectly balanced in proportions - the inspiration for our work is the art of ancient Greece and Rome. Since 1991, we have been sharing with you the passion of creation, discovering the secrets hidden in classic beauty.",
-	 "paragraph2": "The main subject of our activity is finishing works of an artistic nature and renovation of historic buildings. We specialize in the production of construction columns, balustrades made of concrete balusters and architectural details for interior design, facades and gardens. Particularly important for our company is the art department, in which we implement your ideas by creating monumental sculptures and reconstructions of architectural details - there are many examples."
+	 "paragraph2": "The main subject of our activity is finishing works of an artistic nature and renovation of historic buildings. We specialize in the production of construction columns, balustrades made of concrete balusters and architectural details for interior design, facades and gardens. Particularly important for our company is the art department, in which we implement your ideas by creating monumental sculptures and reconstructions of architectural details - there are many examples.",
+	 "welcome": "Please be invited to get to know our offer from the list.",
+	 "download": "Download PDF catalog"
   },
   "de": {
     "pageHeading": "Angebot",
     "offer": "Angebot",
-    "details": "Details",
 	 "categories": {
 		"offer": "Angebot",
 		"restorations": "Restorations",
@@ -85,7 +86,9 @@
 	 },
 	 "articleHeading": "Gibt es etwas, das wir nicht tun werden?",
 	 "paragraph1": "Die Realität, die uns umgibt, bringt neue Moden und Trends, auch in Architektur und Innenarchitektur. Wir glauben jedoch, dass das Schönste das ist, was harmonisch und in den Proportionen perfekt ausbalanciert ist - die Inspiration für unsere Arbeit ist die Kunst des antiken Griechenlands und Roms. Seit 1991 teilen wir mit Ihnen die Leidenschaft der Kreation und entdecken die Geheimnisse, die in klassischer Schönheit verborgen sind.",
-	 "paragraph2": "Das Hauptthema unserer Tätigkeit ist die Fertigstellung künstlerischer Arbeiten und die Renovierung historischer Gebäude. Wir sind spezialisiert auf die Herstellung von Konstruktionssäulen, Balustraden aus Betonstäben und architektonischen Details für Innenarchitektur, Fassaden und Gärten. Besonders wichtig für unser Unternehmen ist die Kunstabteilung, in der wir Ihre Ideen umsetzen, indem wir monumentale Skulpturen und Rekonstruktionen architektonischer Details schaffen – Beispiele dafür gibt es viele."
+	 "paragraph2": "Das Hauptthema unserer Tätigkeit ist die Fertigstellung künstlerischer Arbeiten und die Renovierung historischer Gebäude. Wir sind spezialisiert auf die Herstellung von Konstruktionssäulen, Balustraden aus Betonstäben und architektonischen Details für Innenarchitektur, Fassaden und Gärten. Besonders wichtig für unser Unternehmen ist die Kunstabteilung, in der wir Ihre Ideen umsetzen, indem wir monumentale Skulpturen und Rekonstruktionen architektonischer Details schaffen – Beispiele dafür gibt es viele.",
+	 "welcome": "Bitte seien Sie eingeladen, unser Angebot anhand der Liste kennenzulernen.",
+	 "download": "PDF-Katalog Download"
   }
 }
 </i18n>
@@ -144,10 +147,11 @@
 								<h2 class="text-h6 mb-4">{{ $t("articleHeading") }}</h2>
 								<p>{{ $t("paragraph1") }}</p>
 								<p>{{ $t("paragraph2") }}</p>
-								<p>
-									<v-btn text href="/katalog_kwiaton_pracownia_sztukatorska.pdf" color="red" target="_blank"
+								<p class="font-weight-bold text-center">{{ $t("welcome") }}</p>
+								<p class="mt-8 text-center">
+									<v-btn text href="/katalog_kwiaton_pracownia_sztukatorska.pdf" color="red" target="_blank" class="mx-n4"
 										><v-icon class="mr-3">fas fa-file-pdf</v-icon>
-										Pobierz nasz katalog PDF</v-btn
+										{{ $t("download") }}</v-btn
 									>
 								</p>
 							</article>

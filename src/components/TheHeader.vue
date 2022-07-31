@@ -21,7 +21,7 @@
 					<v-img
 						src="img/logo.png"
 						contain
-						aspect-ratio="3.24"
+						aspect-ratio="3.15"
 						width="100%"
 						class="logo__img"
 						alt="Logo firmy Kwiaton."
