@@ -1,3 +1,17 @@
+<i18n>
+{
+  "pl": {
+    "title": "Oferta - Balustrady"
+  },
+  "en": {
+    "title": "Offer - Balustrades"
+  },
+  "de": {
+    "title": "Angebot - Geländer"
+  }
+}
+</i18n>
+
 <template>
   <section class="pa-4">
 		<h2 class="text-h5 mb-6">Balustrady</h2>
@@ -11,6 +25,12 @@
 <script>
 export default {
 	name: "OfferBalustradesPage",
+
+	head() {
+		return {
+			title: this.$t("title"),
+		};
+	},
 
 	nuxtI18n: {
 		paths: {

@@ -1,6 +1,7 @@
 <i18n>
 {
 	"pl": {
+		"title": "Strona główna",
 		"welcome": "Witamy",
 		"welcomeText": "Firma powstała 5 września 1991 roku w Boguchwale przy ulicy Tkaczowej 188. Prace wykończeniowe o charakterze artysycznym oraz renowacje budynków zabytkowych i historycznych są głównym przedmiotem naszej działalności.",
 		"cardPhotos": {
@@ -23,6 +24,7 @@
 		}
 	},
 	"en": {
+		"title": "Home page",
 		"welcome": "Welcome",
 		"welcomeText": "The company was founded on September 5, 1991 in Boguchwała, Poland. Finishing works of an artistic nature and renovation of historical buildings are the main subject of our activity.",
 		"cardPhotos": {
@@ -45,6 +47,7 @@
 		}
 	},
 	"de": {
+		"title": "Startseite",
 		"welcome": "Herzlich willkommen",
 		"welcomeText": "Das Unternehmen wurde am 5. September 1991 in Boguchwała in Tkaczowa 188 gegründet. Hauptgegenstand unserer Tätigkeit sind künstlerische Ausbauarbeiten und die Renovierung historischer Gebäude.",
 		"cardPhotos": {
@@ -117,7 +120,7 @@ export default {
 
 	head() {
 		return {
-			title: "Strona Główna",
+			title: this.$t("title"),
 		};
 	},
 
