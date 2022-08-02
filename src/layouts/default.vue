@@ -3,20 +3,23 @@
 	"pl": {
 		"cookies": "Ciasteczka",
 		"ok": "Rozumiem",
-		"cookies_text": "Ta strona używa ciasteczek (cookies), dzięi którym może działać lepiej.",
-		"cookies_link": "Dowiedz się więcej o ciasteczkach."
+		"cookies_text": "Ta strona używa ciasteczek (cookies), dzięki którym może działać lepiej.",
+		"cookies_link": "Dowiedz się więcej o ciasteczkach.",
+		"cookies_url": "https://wszystkoociasteczkach.pl/"
 	},
 	"en": {
 		"cookies": "Cookies",
 		"ok": "I understand",
 		"cookies_text": "This website uses cookies to make it work better.",
-		"cookies_link": "Find out more about cookies."
+		"cookies_link": "Find out more about cookies.",
+		"cookies_url": "https://allaboutcookies.org/"
 	},
 	"de": {
 		"cookies": "Kekse",
 		"ok": "Ich verstehe",
 		"cookies_text": "Diese Seite verwendet Kekse (Cookies), damit sie besser funktionieren kann.",
-		"cookies_link": "Erfahren Sie mehr über Cookies."
+		"cookies_link": "Erfahren Sie mehr über Cookies.",
+		"cookies_url": "https://allaboutcookies.org/ge"
 	}
 }
 </i18n>
@@ -42,7 +45,7 @@
 				<v-card-text>
 					{{ $t("cookies_text") }}
 					<br />
-					<a href="http://wszystkoociasteczkach.pl" target="_blank">{{ $t("cookies_link") }}</a>
+					<a :href="$t('cookies_url')" target="_blank">{{ $t("cookies_link") }}</a>
 				</v-card-text>
 				<v-card-actions>
 					<v-spacer></v-spacer>

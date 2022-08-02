@@ -97,7 +97,7 @@
 	<main>
 		<h1 class="text-h4 mb-6 ml-4">{{ $t("pageHeading") }}</h1>
 		<v-row>
-			<v-col cols="12" md="3">
+			<v-col cols="12" md="4" lg="3">
 				<v-select
 					solo
 					flat
@@ -139,7 +139,7 @@
 					</div>
 				</card>
 			</v-col>
-			<v-col cols="12" md="9">
+			<v-col cols="12" md="8" lg="9">
 				<card>
 					<transition name="fade-transition" mode="out-in">
 						<div v-if="isMainOfferRoute" key="MainOffer" class="pa-4">
