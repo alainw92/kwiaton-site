@@ -1,9 +1,32 @@
+<i18n>
+{
+  "pl": {
+    "title": "Oferta - Zworniki",
+	 "heading": "Zworniki",
+	 "paragraph1": "Elementy zwieńczające gzymsów.",
+	 "heading2": "Przykłady"
+  },
+  "en": {
+    "title": "Offer - Crowns",
+	 "heading": "Crowns",
+	 "paragraph1": "Finishing elements of cornices.",
+	 "heading2": "Examples"
+  },
+  "de": {
+    "title": "Angebot - Schlüsselsteine",
+	 "heading": "Schlüsselsteine",
+	 "paragraph1": "Abschlusselemente von Gesimsen.",
+	 "heading2": "Beispiele"
+  }
+}
+</i18n>
+
 <template>
   <section class="pa-4">
-		<h2 class="text-h5 mb-6">Zworniki</h2>
-		<p>Elementy zwieńczające gzymsów.</p>
+		<h2 class="text-h5 mb-6">{{ $t('heading') }}</h2>
+		<p>{{ $t('paragraph1') }}</p>
 		<photo-gallery contain :folder="photosMainPath" :photos="gallery"></photo-gallery>
-		<h3 class="text-h6 my-6">Przykłady</h3>
+		<h3 class="text-h6 my-6">{{ $t('heading2') }}</h3>
 		<photo-gallery :folder="photosMainPath" :photos="photos"></photo-gallery>
 	</section>
 </template>
@@ -11,6 +34,13 @@
 <script>
 export default {
 	name: "OfferCrownsPage",
+	scrollToTop: true,
+
+	head() {
+		return {
+			title: this.$t("title"),
+		};
+	},
 
 	nuxtI18n: {
 		paths: {
@@ -33,7 +63,6 @@ export default {
 				{ src: "Z7.webp", alt: "Zwornik Z7", title: "Z7", description: "44 x 35 x 25 cm" },
 				{ src: "Z8.webp", alt: "Zwornik Z8", title: "Z8", description: "34 x 34 x 10 cm" },
 				{ src: "Z9.webp", alt: "Zwornik Z9", title: "Z9", description: "21 x 17 x 17 cm" },
-				{ src: "Z10.webp", alt: "Zwornik Z10", title: "Z10", description: "30 x 19,5 x 16 cm" },
 				{ src: "Z11.webp", alt: "Zwornik Z11", title: "Z11", description: "25 x 12 x 8 cm" },
 				{ src: "Z12.webp", alt: "Zwornik Z12", title: "Z12", description: "20 x 13 x 6 cm" },
 				{ src: "Z13.webp", alt: "Zwornik Z13", title: "Z13", description: "26 x 18,5 x 8 cm" },

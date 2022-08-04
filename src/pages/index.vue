@@ -3,7 +3,7 @@
 	"pl": {
 		"title": "Strona główna",
 		"welcome": "Witamy",
-		"welcomeText": "Firma powstała 5 września 1991 roku w Boguchwale przy ulicy Tkaczowej 188. Prace wykończeniowe o charakterze artysycznym oraz renowacje budynków zabytkowych i historycznych są głównym przedmiotem naszej działalności.",
+		"welcomeText": "Firma powstała 5 września 1991 roku w Boguchwale przy ulicy Tkaczowa 188. Prace wykończeniowe o charakterze artysycznym oraz renowacje budynków zabytkowych i historycznych są głównym przedmiotem naszej działalności.",
 		"cardPhotos": {
 			"balustrades": {
 				"title": "Balustrady",

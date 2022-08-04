@@ -24,7 +24,7 @@
 			"heading": "Referencje",
 			"paragraph1": "Wykonaliśmy wiele interesujących, ciekawych oraz pracochłonnych projektów.",
 			"paragraph2": "Naszymi klientami są osoby prywatne, kościoły, firmy jak i instytucje.",
-			"paragraph3": "Współpracujemy z wieloma znanymi architektami, projektantami oraz rzeźbiarzami. Nasi dotychczasowi klienci polecają nas swoim znajomym - to są najlepsze referencje. Robimy wszystko aby nasz klient był zadowolony. Realizowaliśmy także zlecenia w Austrii (Ziggerstorf) oraz w Niemczech (Golbach).",
+			"paragraph3": "Współpracujemy z wieloma znanymi architektami, projektantami oraz rzeźbiarzami. Nasi dotychczasowi klienci polecają nas swoim znajomym - to są najlepsze referencje. Robimy wszystko aby nasz klient był zadowolony. Realizowaliśmy także zlecenia w Austrii (Ziggerstorf) oraz w Niemczech (Baden-Baden).",
 			"paragraph4": "W trakcie naszej wieloletniej działalności wykonaliśmy prace między innymi dla:",
 			"list1": "<li>Infores S.A. w Rzeszowie,</li><li>Hotel Zakładu Karnego w Załężu,</li><li>Kościół pod wezwaniem Chrystusa Króla w Rzeszowie,</li><li>Budynek zabytkowy w Łańcucie (Raichardówka),</li><li>oraz dla wielu osób prywatnych.</li>"
 		}
@@ -53,7 +53,7 @@
 			"heading": "Testimonials",
 			"paragraph1": "We have completed many interesting and time-consuming projects.",
 			"paragraph2": "Our clients are individuals, churches, companies and institutions.",
-			"paragraph3": "We cooperate with many well-known architects, designers and sculptors. Our existing clients recommend us to their friends - these are the best references. We do everything to make our client satisfied. We also carried out orders in Austria (Ziggerstorf) and Germany (Golbach).",
+			"paragraph3": "We cooperate with many well-known architects, designers and sculptors. Our existing clients recommend us to their friends - these are the best references. We do everything to make our client satisfied. We also carried out orders in Austria (Ziggerstorf) and Germany (Baden-Baden).",
 			"paragraph4": "During our many years of activity, we have performed works for, among others:",
 			"list1": "<li>Infores S.A. in Rzeszów,</li><li>Hotel of the Penitentiary in Załęże,</li><li>The Church of Christ the King in Rzeszów,</li><li>A historic building in Łańcut (Raichardówka),</li><li>and for many individuals.</li>"
 		}
@@ -82,7 +82,7 @@
 			"heading": "Referenzen",
 			"paragraph1": "Wir haben viele interessante und zeitaufwändige Projekte abgeschlossen.",
 			"paragraph2": "Unsere Kunden sind Privatpersonen, Kirchen, Unternehmen und Institutionen.",
-			"paragraph3": "Wir arbeiten mit vielen namhaften Architekten, Designern und Bildhauern zusammen. Unsere Bestandskunden empfehlen uns an ihre Freunde weiter – das sind die besten Referenzen. Wir tun alles, um unsere Kunden zufrieden zu stellen. Wir haben auch Aufträge in Österreich (Ziggerstorf) und Deutschland (Golbach) ausgeführt.",
+			"paragraph3": "Wir arbeiten mit vielen namhaften Architekten, Designern und Bildhauern zusammen. Unsere Bestandskunden empfehlen uns an ihre Freunde weiter – das sind die besten Referenzen. Wir tun alles, um unsere Kunden zufrieden zu stellen. Wir haben auch Aufträge in Österreich (Ziggerstorf) und Deutschland (Baden-Baden) ausgeführt.",
 			"paragraph4": "Während unserer langjährigen Tätigkeit haben wir unter anderem Arbeiten ausgeführt für:",
 			"list1": "<li>Infores S.A. in Rzeszów,</li><li>Hotel der Strafanstalt in Załęże,</li><li>Christkönigskirche in Rzeszów,</li><li>Ein historisches Gebäude in Łańcut (Raichardówka),</li><li>und für viele Privatpersonen.</li>"
 		}

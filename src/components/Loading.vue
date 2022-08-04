@@ -1,4 +1,18 @@
-<template functional>
+<i18n>
+{
+	"pl": {
+		"loading": "Wczytywanie..."
+	},
+	"en": {
+		"loading": "Loading..."
+	},
+	"de": {
+		"loading": "Wird geladen..."
+	}
+}
+</i18n>
+
+<template>
 	<v-overlay light opacity="1">
 		<div class="bg"></div>
 		<div class="sk-cube-grid">
@@ -12,7 +26,7 @@
 			<div class="sk-cube sk-cube8"></div>
 			<div class="sk-cube sk-cube9"></div>
 		</div>
-		<div class="loading-text">Wczytywanie...</div>
+		<div class="loading-text">{{ $t('loading') }}</div>
 	</v-overlay>
 </template>
 

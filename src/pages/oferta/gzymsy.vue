@@ -1,12 +1,41 @@
+<i18n>
+{
+  "pl": {
+    "title": "Oferta - Gzymsy",
+	 "heading": "Gzymsy",
+	 "paragraph1": "Posiadamy w ofercie dwa rodzaje gzymsów: przysufitowe oraz naścienne. Poniżej znajdą Państwo niektóre typy gzymsów jakie wykonujemy. Zachęcamy do kontaktu także w przypadku undywidualnych zapytań. Na dole strony znajdują się również przykłady zastosowania naszych gzymsów w praktyce.",
+	 "heading1": "Gzymsy przysufitowe",
+	 "heading2": "Gzymsy naścienne",
+	 "heading3": "Przykłady zastosowania"
+  },
+  "en": {
+    "title": "Offer - Cornices",
+	 "heading": "Cornices",
+	 "paragraph1": "We offer two types of cornices: ceiling and wall. Below you will find some types of cornices that we make. We also encourage you to contact us in the case of individual inquiries. At the bottom of the page you can also find examples of how our cornices can be used in practice.",
+	 "heading1": "Ceiling cornices",
+	 "heading2": "Wall cornices",
+	 "heading3": "Examples of use"
+  },
+  "de": {
+    "title": "Angebot - Gesimse",
+	 "heading": "Gesimse",
+	 "paragraph1": "Wir bieten zwei Arten von Gesimsen an: Decke und Wand. Nachfolgend finden Sie einige Arten von Gesimsen, die wir herstellen. Wir empfehlen Ihnen auch, sich bei individuellen Anfragen an uns zu wenden. Unten auf der Seite finden Sie auch Beispiele, wie unsere Gesimse in der Praxis verwendet werden können.",
+	 "heading1": "Deckengesimse",
+	 "heading2": "Wandgesimse",
+	 "heading3": "Anwendungsbeispiele"
+  }
+}
+</i18n>
+
 <template>
   <section class="pa-4">
-		<h2 class="text-h5 mb-6">Gzymsy</h2>
-		<p class="text-justify text-indent">Posiadamy w ofercie dwa rodzaje gzymsów: przysufitowe oraz naścienne. Poniżej znajdą Państwo niektóre typy gzymsów jakie wykonujemy. Zachęcamy do kontaktu także w przypadku undywidualnych zapytań. Na dole strony znajdują się również przykłady zastosowania naszych gzymsów w praktyce.</p>
-		<h3 class="text-h6 mb-6 mt-10">Gzymsy przysufitowe</h3>
+		<h2 class="text-h5 mb-6">{{ $t('heading') }}</h2>
+		<p class="text-justify text-indent">{{ $t('paragraph1') }}</p>
+		<h3 class="text-h6 mb-6 mt-10">{{ $t('heading1') }}</h3>
 		<photo-gallery contain :folder="ceilingMainPath" :photos="ceilingGallery"></photo-gallery>
-		<h3 class="text-h6 mb-6 mt-10">Gzymsy naścienne</h3>
+		<h3 class="text-h6 mb-6 mt-10">{{ $t('heading2') }}</h3>
 		<photo-gallery contain :folder="wallMainPath" :photos="wallGallery"></photo-gallery>
-		<h3 class="text-h6 mb-6 mt-10">Przykłady zastosowań</h3>
+		<h3 class="text-h6 mb-6 mt-10">{{ $t('heading3') }}</h3>
 		<photo-gallery :folder="photosMainPath" :photos="photos"></photo-gallery>
 	</section>
 </template>
@@ -14,12 +43,19 @@
 <script>
 export default {
 	name: "OfferCornicesPage",
+	scrollToTop: true,
+
+	head() {
+		return {
+			title: this.$t("title"),
+		};
+	},
 
 	nuxtI18n: {
 		paths: {
 			pl: "/oferta/gzymsy",
-			en: "/offer/cornices",
-			de: "/angebot/cornices",
+			en: "/offer/corniches",
+			de: "/angebot/gesimse",
 		},
 	},
 

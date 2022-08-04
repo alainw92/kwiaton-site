@@ -32,7 +32,7 @@ export default {
 					hid: "keywords",
 					name: "keywords",
 					content:
-						"gzymsy, renowacje budynków, produkcja elementów sztukatorskich, sztukateria, sztukatorstwo, zabytki, formy architektoniczne",
+						"gzymsy, renowacje budynków, ogrodzenia, balustrady betonowe, produkcja elementów sztukatorskich, sztukateria, sztukatorstwo, zabytki, formy architektoniczne",
 				},
 				{
 					hid: "description",

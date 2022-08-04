@@ -1,23 +1,32 @@
 <i18n>
 {
   "pl": {
-    "title": "Oferta - Balustrady"
+    "title": "Oferta - Balustrady",
+	 "heading": "Balustrady",
+	 "paragraph1": "Wykonujemy balustrady w różnych stylach. Poniżej znajdują się przykłady tralek balustradowych dostępnych w naszej ofercie.",
+	 "heading2": "Przykłady wykonanych projektów"
   },
   "en": {
-    "title": "Offer - Balustrades"
+    "title": "Offer - Balustrades",
+	 "heading": "Balustrades",
+	 "paragraph1": "We make railings in various styles. Below are some examples of balusters available in our offer.",
+	 "heading2": "Examples of projects completed"
   },
   "de": {
-    "title": "Angebot - Geländer"
+    "title": "Angebot - Geländer",
+	 "heading": "Geländer",
+	 "paragraph1": "Wir stellen Geländer in verschiedenen Stilrichtungen her. Nachfolgend finden Sie einige Beispiele von Balustraden, die in unserem Angebot erhältlich sind.",
+	 "heading2": "Beispiele abgeschlossener Projekte"
   }
 }
 </i18n>
 
 <template>
-  <section class="pa-4">
-		<h2 class="text-h5 mb-6">Balustrady</h2>
-		<p>Wykonujemy balustrady w różnych stylach. Poniżej znajdują się przykłady tralek balustradowych dostępnych w naszej ofercie.</p>
+	<section class="pa-4">
+		<h2 class="text-h5 mb-6">{{ $t("heading") }}</h2>
+		<p>{{ $t("paragraph1") }}</p>
 		<photo-gallery contain :folder="galleryMainPath" :photos="gallery"></photo-gallery>
-		<h3 class="text-h6 my-6">Przykłady wykonanych projektów</h3>
+		<h3 class="text-h6 my-6">{{ $t("heading2") }}</h3>
 		<photo-gallery :folder="photosMainPath" :photos="photos"></photo-gallery>
 	</section>
 </template>
@@ -25,6 +34,7 @@
 <script>
 export default {
 	name: "OfferBalustradesPage",
+	scrollToTop: true,
 
 	head() {
 		return {
@@ -36,7 +46,7 @@ export default {
 		paths: {
 			pl: "/oferta/balustrady",
 			en: "/offer/balustrades",
-			de: "/angebot/balustrades",
+			de: "/angebot/gelander",
 		},
 	},
 
@@ -70,32 +80,32 @@ export default {
 
 			photosMainPath: "photos/oferta/balustrady/",
 			photos: [
-				{ src: "1.webp", alt: "", title: "", description: "" },
-				{ src: "2.webp", alt: "", title: "", description: "" },
-				{ src: "4.webp", alt: "", title: "", description: "" },
-				{ src: "5.webp", alt: "", title: "", description: "" },
-				{ src: "6.webp", alt: "", title: "", description: "" },
-				{ src: "7.webp", alt: "", title: "", description: "" },
-				{ src: "8.webp", alt: "", title: "", description: "" },
-				{ src: "9.webp", alt: "", title: "", description: "" },
-				{ src: "10.webp", alt: "", title: "", description: "" },
-				{ src: "11.webp", alt: "", title: "", description: "" },
-				{ src: "12.webp", alt: "", title: "", description: "" },
-				{ src: "13.webp", alt: "", title: "", description: "" },
-				{ src: "14.webp", alt: "", title: "", description: "" },
-				{ src: "15.webp", alt: "", title: "", description: "" },
-				{ src: "16.webp", alt: "", title: "", description: "" },
-				{ src: "17.webp", alt: "", title: "", description: "" },
-				{ src: "18.webp", alt: "", title: "", description: "" },
-				{ src: "19.webp", alt: "", title: "", description: "" },
-				{ src: "20.webp", alt: "", title: "", description: "" },
-				{ src: "21.webp", alt: "", title: "", description: "" },
-				{ src: "22.webp", alt: "", title: "", description: "" },
-				{ src: "23.webp", alt: "", title: "", description: "" },
-				{ src: "24.webp", alt: "", title: "", description: "" },
-				{ src: "25.webp", alt: "", title: "", description: "" },
+				{ src: "1.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "2.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "4.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "5.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "6.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "7.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "8.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "9.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "10.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "11.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "12.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "13.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "14.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "15.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "16.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "17.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "18.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "19.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "20.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "21.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "22.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "23.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "24.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
+				{ src: "25.webp", alt: "Zdjęcie z balustradą", title: "", description: "" },
 			],
-		}
-	}
-}
+		};
+	},
+};
 </script>

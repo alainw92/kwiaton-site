@@ -1,7 +1,27 @@
+<i18n>
+{
+  "pl": {
+    "title": "Oferta - Elewacje",
+	 "heading": "Elewacje budynków",
+	 "paragraph1": "Wykonamy nawet najtrudniejszą elewację."
+  },
+  "en": {
+    "title": "Offer - Facades",
+	 "heading": "Building facades",
+	 "paragraph1": "We will make even the most difficult facade."
+  },
+  "de": {
+    "title": "Angebot - Fassaden",
+	 "heading": "Gebäudefassaden",
+	 "paragraph1": "Wir machen auch die schwierigste Fassade."
+  }
+}
+</i18n>
+
 <template>
   <section class="pa-4">
-		<h2 class="text-h5 mb-6">Elewacje budynków</h2>
-		<p>Wykonamy nawet najtrudniejszą elewację.</p>
+		<h2 class="text-h5 mb-6">{{ $t('heading') }}</h2>
+		<p>{{ $t('paragraph1') }}</p>
 		<photo-gallery :folder="photosMainPath" :photos="gallery"></photo-gallery>
 	</section>
 </template>
@@ -9,12 +29,19 @@
 <script>
 export default {
 	name: "OfferFacadesPage",
+	scrollToTop: true,
+
+	head() {
+		return {
+			title: this.$t("title"),
+		};
+	},
 
 	nuxtI18n: {
 		paths: {
 			pl: "/oferta/elewacje",
 			en: "/offer/facades",
-			de: "/angebot/facades",
+			de: "/angebot/fassaden",
 		},
 	},
 
