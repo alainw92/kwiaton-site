@@ -230,7 +230,7 @@ export default {
 <style lang="scss" scoped>
 .photo-dialog {
 	height: 80vh;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 .dialog-image {
 	max-width: 100%;
