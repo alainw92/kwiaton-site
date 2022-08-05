@@ -2,7 +2,7 @@
 {
   "pl": {
     "title": "Oferta - Renowacje",
-	 "heading": "Wnętrza",
+	 "heading": "Renowacje",
 	 "paragraph1": "Zajmujemy się renowacjami zabytkowych budynków wraz z odtworzeniem wszystkich detali architektonicznych."
   },
   "en": {

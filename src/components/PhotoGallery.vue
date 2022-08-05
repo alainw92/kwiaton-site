@@ -230,6 +230,7 @@ export default {
 <style lang="scss" scoped>
 .photo-dialog {
 	height: 80vh;
+	overflow-y: scroll;
 }
 .dialog-image {
 	max-width: 100%;
@@ -263,23 +264,4 @@ export default {
 	padding: 8px !important;
 	min-width: 36px !important;
 }
-
-/* .slide-left-enter-active,
-.slide-left-leave-active {
-	transition: transform 0.2s;
-}
-.slide-left-enter-active {
-	transition-timing-function: ease-out;
-}
-.slide-left-leave-active {
-	transition-timing-function: ease-in;
-}
-.slide-left-leave-active {
-	transform: translateX(-50%);
-}
-
-.slide-left-enter,
-.slide-left-leave {
-	transform: translateX(50%);
-} */
 </style>
