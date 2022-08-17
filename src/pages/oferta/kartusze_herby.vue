@@ -58,6 +58,7 @@ export default {
 				{ src: "13.webp", alt: "Zdjęcie herbu z betonu", title: "", description: "" },
 				{ src: "14.webp", alt: "Zdjęcie herbu z betonu", title: "", description: "" },
 				{ src: "15.webp", alt: "Zdjęcie herbu z betonu", title: "", description: "" },
+				{ src: "19.webp", alt: "Zdjęcie herbu z betonu", title: "", description: "" },
 				{ src: "16.webp", alt: "Zdjęcie herbu z betonu", title: "", description: "" },
 				{ src: "17.webp", alt: "Zdjęcie herbu z betonu", title: "", description: "" },
 				{ src: "18.webp", alt: "Zdjęcie herbu z betonu", title: "", description: "" },

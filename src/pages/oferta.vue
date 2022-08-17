@@ -266,7 +266,7 @@ export default {
 	} */
 
 	&.nuxt-link-exact-active {
-		background-color: var(--v-secondary-base);
+		background-color: var(--v-text-base);
 		color: var(--v-bgLight-base);
 	}
 }

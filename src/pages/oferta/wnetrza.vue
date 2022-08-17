@@ -47,6 +47,7 @@ export default {
 			photos: [
 				{ src: "1.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
 				{ src: "2.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
+				{ src: "41.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
 				{ src: "3.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
 				{ src: "4.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
 				{ src: "5.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
@@ -84,6 +85,12 @@ export default {
 				{ src: "38.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
 				{ src: "39.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
 				{ src: "40.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
+				{ src: "42.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
+				{ src: "43.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
+				{ src: "44.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
+				{ src: "45.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
+				{ src: "46.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
+				{ src: "47.webp", alt: "Zdjęcie wnętrza ze sztukaterią", title: "", description: "" },
 			],
 		};
 	},
