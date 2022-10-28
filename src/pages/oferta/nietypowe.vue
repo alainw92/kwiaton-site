@@ -45,6 +45,8 @@ export default {
 		return {
 			photosMainPath: "photos/oferta/nietypowe/",
 			photos: [
+				{ src: "13.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				//
 				{ src: "1.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
 				{ src: "2.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
 				{ src: "3.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
@@ -57,6 +59,14 @@ export default {
 				{ src: "10.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
 				{ src: "11.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
 				{ src: "12.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				//
+				{ src: "14.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				{ src: "15.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				{ src: "16.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				{ src: "17.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				{ src: "18.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				{ src: "19.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				{ src: "20.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
 			],
 		}
 	}

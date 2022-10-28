@@ -87,6 +87,12 @@ export default {
 				{ src: "15.webp", alt: "Zdjęcie ogrodzenia betonowego", title: "", description: "" },
 				{ src: "16.webp", alt: "Zdjęcie ogrodzenia betonowego", title: "", description: "" },
 				{ src: "17.webp", alt: "Zdjęcie ogrodzenia betonowego", title: "", description: "" },
+				//
+				{ src: "18.webp", alt: "Zdjęcie ogrodzenia betonowego", title: "", description: "" },
+				{ src: "19.webp", alt: "Zdjęcie ogrodzenia betonowego", title: "", description: "" },
+				{ src: "20.webp", alt: "Zdjęcie ogrodzenia betonowego", title: "", description: "" },
+				{ src: "21.webp", alt: "Zdjęcie ogrodzenia betonowego", title: "", description: "" },
+				{ src: "22.webp", alt: "Zdjęcie ogrodzenia betonowego", title: "", description: "" },
 			],
 		}
 	}
