@@ -66,6 +66,7 @@ export default {
 				{ src: "17.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
 				{ src: "18.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
 				{ src: "19.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
+				{ src: "21.webp", alt: "Cokół pomnika, rzeźby", title: "", description: "" },
 				{ src: "20.webp", alt: "Zdjęcie nietypowej realizacji z betonu", title: "", description: "" },
 			],
 		}

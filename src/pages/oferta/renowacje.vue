@@ -85,6 +85,7 @@ export default {
 				{ src: "36.webp", alt: "Zdjęcie budynku po renowacji", title: "", description: "" },
 				{ src: "37.webp", alt: "Zdjęcie budynku po renowacji", title: "", description: "" },
 				{ src: "38.webp", alt: "Zdjęcie budynku po renowacji", title: "", description: "" },
+				{ src: "39.webp", alt: "Obraz, malowidło sakralne", title: "", description: "" },
 			],
 		}
 	}

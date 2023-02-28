@@ -1,5 +1,6 @@
 {
 	"name": "kwiaton-site",
+	"version": "1.0.4",
 	"scripts": {
 		"dev": "nuxt",
 		"build": "nuxt build",
